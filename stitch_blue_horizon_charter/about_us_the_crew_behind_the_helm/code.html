@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Aurelian Maritime</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#baeaff",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#002e5d",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary-container": "#2891b2",
+                        "tertiary-fixed-dim": "#76d2f6",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#6f88ad",
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#005eb2",
+                        "surface-tint": "#476083",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed-variant": "#004d62",
+                        "tertiary": "#00070b",
+                        "on-secondary-fixed-variant": "#004788",
+                        "primary-container": "#001f3f",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#001b3b",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#001f29",
+                        "on-primary-fixed": "#001c3a",
+                        "primary": "#000613",
+                        "outline-variant": "#c4c6cf",
+                        "outline": "#74777f",
+                        "secondary-container": "#4597fe",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8e8",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#00222d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .nautical-divider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nautical-divider::before,
+        .nautical-divider::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #7FDBFF; /* Seafoam */
+            opacity: 0.3;
+        }
+        .nautical-divider span {
+            margin: 0 16px;
+            color: #7FDBFF; /* Seafoam */
+        }
+        .flat-card {
+            border: 1px solid #E9ECEF;
+            transition: all 0.3s ease;
+        }
+        .flat-card:hover {
+            box-shadow: 0 12px 32px rgba(0, 31, 63, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-sm tracking-tighter text-primary dark:text-primary-fixed">
+                AURELIAN
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Vessel</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Itineraries</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-semibold border-b-2 border-secondary transition-colors duration-300 font-body-md text-body-md" href="#">About Us</a>
+</nav>
+<button class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded transition-colors duration-300 hover:bg-primary">
+                Rent Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[500px] flex items-center justify-center px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A serene, wide-angle photograph of a classic sailing yacht navigating calm, deep blue waters at dawn. The light is soft and cool, casting gentle reflections on the ocean surface. The sky is a pale gradient of morning hues. The overall aesthetic is minimalist, luxurious, and peaceful, embodying high-end maritime travel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgccdW9rnFpN3jDTWdUdswy0NUGFkTUKq3g4USvc5ou2s45mA5T461jBZWv5JqKMe270iofEkSILZrptVguy2-GYpJCUzdMj4LcTPg5ZAs3z5P7j4o5DEHNg-vofSzlIw83V9W2MjfuU031hdj6VxrMcneRdWulp5ydSP9sQx7tTlNWNZ3kM9vVSp8VTfjrjDg8-V6twpM9IGfp6PoZ8qZxIsZWDDFX7WprI3N_2cWf40B2vx42oRPl_427bhG3jhDjO11BHabcBo"/>
+<div class="absolute inset-0 bg-primary-container/40 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center text-on-primary max-w-3xl mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Sharing our love for the ocean, one voyage at a time.</h1>
+<div class="nautical-divider w-64 mx-auto">
+<span class="material-symbols-outlined text-sm">explore</span>
+</div>
+</div>
+</section>
+<!-- The Owners' Story -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative order-2 md:order-1">
+<div class="aspect-square rounded-full overflow-hidden border border-outline-variant/30 flat-card">
+<img class="w-full h-full object-cover" data-alt="A candid, warm portrait of two maritime founders standing on the deck of a yacht. They are dressed in smart-casual, understated nautical attire—crisp white shirts and navy blazers. The background features a soft-focus marina under bright, natural sunlight, conveying professionalism, heritage, and approachability in a luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_Cgq3Gz8mTELzXnCicex0UU1UcrXzl8u72o87V7QX_JiFpKL6aJDJ5A2gr68il75YKBW_UUgQuM3QAGGi8NHC_C-rOUn6qKxUgmI23P0hu3l4wr4Kjz3rBlu324JowG0eCx1-5d7Qs0KTrQOS9BqvVbd52YgOgKFZeNq_NNbGqYZVQEEsWDOeEPTfQEksxfq431VIz_JJkJfKU9xAuxuNYBWM0FVL_mqOUrWVx1AqWzMT_h4w6BnEBL8WuKMKc2dwG0e236rjrQ"/>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">The Owners' Story</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Aurelian Maritime was born from a lifelong reverence for the sea. We believe that true luxury lies not just in the vessel, but in the seamless harmony between traditional maritime heritage and uncompromising modern comfort.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our vision is to offer discerning travelers an authentic connection to the ocean. Every itinerary is crafted with precision, and every detail aboard our vessels reflects a deep respect for the nautical arts. We invite you to cast off the bowlines and experience the profound serenity of the open water.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Meet Your Skipper -->
+<section class="bg-surface-bright py-section-gap mb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 mb-12 md:mb-0">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Meet Your Skipper</h2>
+<h3 class="font-body-lg text-body-lg text-secondary mb-8">Captain Elias Thorne</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">directions_boat</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-primary">Decades of Experience</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 25 years navigating the Mediterranean and Caribbean seas, ensuring a deep understanding of maritime conditions and coastal nuances.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-primary">Master Mariner Certified</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Holding the highest level of international safety and navigational certifications, prioritizing your security above all else.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">map</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-primary">Local Knowledge</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Intimate familiarity with hidden coves and secluded anchorages, offering a bespoke experience away from traditional tourist routes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 relative">
+<div class="aspect-[4/5] rounded-[100px_100px_0_0] overflow-hidden border border-outline-variant/30 flat-card">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of an experienced ship captain. He is wearing a crisp, minimalist navy captain's uniform without excessive ornamentation. His expression is confident, calm, and welcoming. The setting is the helm of a modern classic yacht, with soft, natural daylight highlighting his features and the polished wood of the vessel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4QmOalFw3UOvuJsx1tkjiu7WnyoNm9W_Mt4owGwbeA0M0e4oYvMRZszbA7ufQ4I5KBidYktoCvJ6oIT0nk5xfNUNsQQclGXcDu_0NDEVVm8vbObdqx9WnJG12g7aiB6fGavYuGOtEh-FjkInpG-6FivJHFhqUvoxNzIBdzYQ05A8VyrrKIfiyLCartbG119e70a7-LZMEtxkbfnPxR1n3cxL0Pp8TKbiRq95acBfBWx1Fsc_89x4pCpkZoe8FTQFjzJJ7udAPnlo"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-tertiary bg-primary-container dark:bg-tertiary-container grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-on-primary-container mb-4">AURELIAN</div>
+<p class="font-label-caps text-label-caps text-on-primary-container/70">
+                © 2024 AURELIAN MARITIME. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-8 md:justify-end items-start font-label-caps text-label-caps">
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Instagram</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Facebook</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Newsletter</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Contact</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Privacy</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Terms</a>
+</div>
+</footer>
+</body></html>

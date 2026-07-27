@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aurelian Maritime</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2f3131",
+                    "surface-bright": "#f9f9f9",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d4e3ff",
+                    "tertiary-fixed": "#baeaff",
+                    "inverse-primary": "#afc8f0",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#002e5d",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#2f486a",
+                    "primary-fixed-dim": "#afc8f0",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f4",
+                    "on-surface-variant": "#43474e",
+                    "on-tertiary-container": "#2891b2",
+                    "tertiary-fixed-dim": "#76d2f6",
+                    "background": "#f9f9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "on-primary-container": "#6f88ad",
+                    "surface-variant": "#e2e2e2",
+                    "secondary": "#005eb2",
+                    "surface-tint": "#476083",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#004d62",
+                    "tertiary": "#00070b",
+                    "on-secondary-fixed-variant": "#004788",
+                    "primary-container": "#001f3f",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed": "#001b3b",
+                    "secondary-fixed-dim": "#a7c8ff",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed": "#001f29",
+                    "on-primary-fixed": "#001c3a",
+                    "primary": "#000613",
+                    "outline-variant": "#c4c6cf",
+                    "outline": "#74777f",
+                    "secondary-container": "#4597fe",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "surface": "#f9f9f9",
+                    "tertiary-container": "#00222d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-tertiary-fixed-dim selection:text-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-display-lg text-headline-sm tracking-tighter text-primary dark:text-primary-fixed uppercase" href="#">AURELIAN</a>
+<!-- Navigation Links (Web) -->
+<div class="hidden md:flex space-x-12 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Vessel</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Itineraries</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">About Us</a>
+</div>
+<!-- Trailing Action -->
+<a class="bg-primary-container text-on-primary rounded font-label-md text-label-md px-6 py-2.5 transition-transform hover:-translate-y-0.5 shadow-sm hover:shadow-md" href="#">Rent Now</a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[1024px] flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary-container/30 z-10 mix-blend-multiply"></div>
+<div class="w-full h-full bg-cover bg-center bg-no-repeat" data-alt="A breathtaking, cinematic wide shot of a high-end luxury sailing yacht slicing through pristine, deep blue ocean waters. The scene is bathed in brilliant natural sunlight, highlighting the sleek white hull and meticulously crafted wooden decks. The aesthetic is minimal, professional, and undeniably luxurious, evoking a sense of ultimate freedom and sophisticated maritime travel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-kkQjhdDQLmoFQVwc4aefSgofgoJVWeRtduzkiBM7QhCfT0b8YuuXuUJrfvTXcF_X47K4SFeJyaw0PlGuj45-xqcViEfRcTYZ5D39ciQbib_ZLrSszj0WoIUmaPDzih9lcD0NhozgiS8cdNrRv7-lbVQvEajKqJKF9CHo3YvB0NCkPR42c-0AFyMwxCRJxxJrYnBE-a9oogVv6D7r7iGhxDYOnEtb4HvKScChvpEmMmfqm_m0TFoAcsXKhGYHlTpM8Bug4FTZfPo')"></div>
+</div>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center">
+<span class="block h-px w-16 bg-tertiary-fixed-dim mb-8"></span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-surface-container-lowest drop-shadow-lg max-w-4xl mx-auto tracking-tight">Experience the Uncharted.</h1>
+<p class="font-body-lg text-body-lg text-surface-container-lowest/90 mt-6 max-w-2xl mx-auto font-light">Luxury sailing charters for the discerning traveler.</p>
+<a class="mt-12 bg-transparent border border-surface-container-lowest/70 text-surface-container-lowest rounded px-8 py-4 font-label-caps text-label-caps uppercase tracking-wider transition-all duration-300 hover:bg-surface-container-lowest hover:text-primary-container hover:border-surface-container-lowest flex items-center gap-3 group" href="#vessel">
+                    Explore the Vessel
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform" data-icon="east">east</span>
+</a>
+</div>
+</section>
+<!-- Brief Introduction: Sea & Soul -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 relative">
+<div class="absolute -top-6 -left-6 w-24 h-24 border-t border-l border-tertiary-fixed-dim opacity-50 hidden md:block"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Sea &amp; Soul</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        We believe that true luxury lies in the harmony between state-of-the-art maritime engineering and the untamed beauty of the ocean. Aurelian offers a sanctuary on the water—a meticulously designed environment where every detail serves to elevate your journey.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        From our silent-cruising technology to our curated onboard experiences, we blend sophisticated UX principles with traditional nautical craftsmanship to deliver an unparalleled charter experience.
+                    </p>
+<a class="inline-flex items-center gap-2 mt-8 font-label-md text-label-md text-secondary border-b border-transparent hover:border-secondary transition-colors pb-1" href="#">
+                        Discover our philosophy
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative group">
+<div class="w-full aspect-[4/5] bg-surface-variant overflow-hidden rounded-sm border border-outline-variant/30">
+<img alt="Aurelian Design Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, abstract architectural shot of the yacht's interior or deck. Featuring clean lines, minimalist design, rich teak wood contrasting with polished stainless steel and pristine white fiberglass. The lighting is soft and diffused, emphasizing the high-quality materials and the serene, luxurious atmosphere. A subtle hint of the deep blue sea is visible in the soft-focus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJRNaquBO1VYphwRwe1u38v7Y4O_msBNjP4QEjKl72HXn2EKbz-UFiVlT-UjL5XbywOim9aNvE-NTnKQLK-8hL0npC3SdP-hqkk3M8d2hgBFQ3eFrc4-g2XYshPiC7SzBZrVsvOFApcTacRKoNfYmAFsqJ7Giq1GEDaMGN6ZwerMyvvhNer-_jZCcxSIOeHzWDvM6PEYWZ9h0XPDQBZays1al_DfnprSCeWewc5kKa2pCQn-wvXA7hCh-xmOmI9-YDKKEHnnubJHI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Itinerary Preview -->
+<section class="py-section-gap bg-surface-bright border-y border-outline-variant/20" id="itineraries">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<span class="font-label-caps text-label-caps text-primary-container/60 block mb-3">Featured Journey</span>
+<h2 class="font-headline-md text-headline-md text-primary">The Cyclades Blueprint</h2>
+</div>
+<a class="hidden md:inline-flex font-label-md text-label-md text-secondary border-b border-secondary pb-1 mt-4 md:mt-0" href="#">View all routes</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Itinerary Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-sm overflow-hidden group hover:shadow-[0_12px_32px_rgba(0,31,63,0.08)] transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Santorini Caldera" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning aerial view of a secluded cove in the Greek Cyclades. Crystal clear, turquoise waters lap against dramatic rocky cliffs. A pristine white sandy beach is visible. The scene is bathed in bright Mediterranean sunshine, capturing a minimalist and serene travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIS5dUnpCH_nzLRyPr_y33QQPKRu_C9LdwFMYkMBiO9XgHdRAuaWNYoLMFmB1m1GzztNWykKKNuKANZgV5qsfdjhfOExGpmQZBSiE4j_iLbQ6gx-Z_Q4-9TrvWRnnn3auLGDCjWkr445nUF1_NOW8wSQ_bVEp7ePTsw6xxK7eXRTnarnNfFYzdKpfwz0UcPeFNPJVhDjHs09kq7q34AkCNlpFqj0zdvrITFISCbrLPXPLZgpnIxcRv1G3IgrgXcnXEyjVAErpqzsE"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" data-icon="radio_button_checked">radio_button_checked</span>
+<h3 class="font-body-lg text-body-lg text-primary font-medium">Santorini Caldera</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Navigate the iconic volcanic crater, dropping anchor in secluded hot springs accessible only by sea.</p>
+</div>
+</div>
+<!-- Itinerary Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-sm overflow-hidden group hover:shadow-[0_12px_32px_rgba(0,31,63,0.08)] transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Mykonos Coast" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A picturesque view of a traditional whitewashed Greek village cascading down a hillside towards a deep blue harbor. Small fishing boats dot the water. The architecture features clean, geometric lines typical of the Cyclades. The lighting is golden hour, casting long soft shadows and a warm, inviting glow over the minimalist landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbvi_RnkBnWC3qbT-tlEjfW_rMGSyQUiykwBbRcEw1ovtIGLbIGfalapZpSMTOT7s9fcrOu2IDm6txQNrzo4Iy0JBxhtw7rjLBetdrO4D4Jf2Q2iCVNgs3ghIjdj1TN6QMY3yCs3g5e4-J1ZoAgBLjw0FOd5bHvZzHpBqdXm9st7FzxPWdD66ibnsnDMJGyU9URm7qW3nY6vlXM5DqS3T5fIVtlgMqgTanNrgTzBPJ1zLIcm35HN71gq2-8NnbkXsjruXxdcJLGAs"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" data-icon="radio_button_checked">radio_button_checked</span>
+<h3 class="font-body-lg text-body-lg text-primary font-medium">Mykonos Coast</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Experience the vibrant coastal energy before retreating to the absolute privacy of your anchored vessel.</p>
+</div>
+</div>
+<!-- Itinerary Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-sm overflow-hidden group hover:shadow-[0_12px_32px_rgba(0,31,63,0.08)] transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Hidden Polyaigos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist and serene view of a completely empty, pristine beach on an uninhabited island. Fine white sand meets perfectly clear, shallow azure water. A subtle wake from a distant boat disrupts the mirror-like surface. The composition is expansive, emphasizing whitespace and tranquility in a high-end travel context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbKOUnT0yrw6BFcq4HAD7S-2nxVMhPxM-O5-La5A93DJlxRpgmj9KHUXXtjwYo_87g11H8yk-CTqV5T9T0LSZO7jdU1JyyM0uGbDlkEOg7vuoHDQwsa0BcJIJWsoD61kkiWx_6fuV9qUgMoS5Y4qEdjsRzDXpc1CPrF6HSZ8w46_igZ44wVUCCAZQJ9rCzI-bxrNDvxOHIVwFyiVA2NsIQBAbJhdYbguCwPuzf1pGb_JWsS0jhTBl67SrPzxJSLHtedwhtcO5ci3c"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" data-icon="radio_button_checked">radio_button_checked</span>
+<h3 class="font-body-lg text-body-lg text-primary font-medium">Hidden Polyaigos</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Discover the largest uninhabited island in the Aegean, renowned for its untouched, pristine turquoise bays.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Signals -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
+<div class="flex flex-col items-center md:items-start md:pr-12 pt-8 md:pt-0">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 opacity-80" data-icon="health_and_safety">health_and_safety</span>
+<h4 class="font-body-lg text-body-lg text-primary font-medium mb-3">Safety First</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Equipped with redundant maritime systems and adhering to the highest international safety protocols.</p>
+</div>
+<div class="flex flex-col items-center md:items-start md:px-12 pt-12 md:pt-0">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 opacity-80" data-icon="group">group</span>
+<h4 class="font-body-lg text-body-lg text-primary font-medium mb-3">Professional Crew</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">A highly trained, discreet team dedicated to anticipatory service and expert navigation.</p>
+</div>
+<div class="flex flex-col items-center md:items-start md:pl-12 pt-12 md:pt-0">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-6 opacity-80" data-icon="eco">eco</span>
+<h4 class="font-body-lg text-body-lg text-primary font-medium mb-3">Eco-Conscious</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Utilizing advanced silent propulsion and sustainable practices to protect the marine environments we explore.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-primary-container dark:bg-tertiary-container border-t border-tertiary transition-all duration-500">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-1 mb-10 md:mb-0">
+<a class="font-display-lg text-headline-md text-on-primary-container block mb-4 uppercase" href="#">AURELIAN</a>
+<p class="font-body-md text-body-md text-on-primary-container/70 text-sm">Defining the modern standard of luxury maritime exploration.</p>
+</div>
+<div class="md:col-span-2 flex flex-wrap gap-x-12 gap-y-6">
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Facebook</a>
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Newsletter</a>
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Contact</a>
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200 uppercase" href="#">Terms</a>
+</div>
+<div class="md:col-span-1 flex items-end justify-start md:justify-end mt-10 md:mt-0">
+<p class="font-label-caps text-label-caps text-on-primary-container/50">© 2024 AURELIAN MARITIME. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>

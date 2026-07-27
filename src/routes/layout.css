@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+/* Design system "Maritime Elegance" (vedi stitch_blue_horizon_charter/maritime_elegance/DESIGN.md).
+   Qui solo i token effettivamente usati dalle pagine. */
+@theme {
+	--color-background: #f9f9f9;
+	--color-on-background: #1a1c1c;
+	--color-surface: #f9f9f9;
+	--color-surface-bright: #f9f9f9;
+	--color-surface-variant: #e2e2e2;
+	--color-surface-container-lowest: #ffffff;
+	--color-on-surface-variant: #43474e;
+	--color-outline: #74777f;
+	--color-outline-variant: #c4c6cf;
+	--color-primary: #000613;
+	--color-on-primary: #ffffff;
+	--color-primary-container: #001f3f;
+	--color-on-primary-container: #6f88ad;
+	--color-primary-fixed-dim: #afc8f0;
+	--color-secondary: #005eb2;
+	--color-secondary-fixed: #d5e3ff;
+	--color-tertiary: #00070b;
+	--color-tertiary-fixed: #baeaff;
+	--color-tertiary-fixed-dim: #76d2f6;
+
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Playfair Display', ui-serif, Georgia, serif;
+
+	--text-display: 64px;
+	--text-display--line-height: 72px;
+	--text-display--letter-spacing: -0.02em;
+	--text-display--font-weight: 700;
+	--text-display-sm: 40px;
+	--text-display-sm--line-height: 48px;
+	--text-display-sm--letter-spacing: -0.01em;
+	--text-display-sm--font-weight: 700;
+	--text-headline: 32px;
+	--text-headline--line-height: 40px;
+	--text-headline--font-weight: 600;
+	--text-headline-sm: 24px;
+	--text-headline-sm--line-height: 32px;
+	--text-headline-sm--font-weight: 600;
+	--text-body-lg: 18px;
+	--text-body-lg--line-height: 28px;
+	--text-body: 16px;
+	--text-body--line-height: 24px;
+	--text-label: 14px;
+	--text-label--line-height: 20px;
+	--text-label--font-weight: 500;
+	--text-caps: 12px;
+	--text-caps--line-height: 16px;
+	--text-caps--letter-spacing: 0.1em;
+	--text-caps--font-weight: 600;
+
+	--container-site: 1280px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+	user-select: none;
+}
+
+/* segnaposto mostrato da <Img> finché la foto non è in static/img/ */
+.img-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 8px;
+	min-height: 120px;
+	background: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 10px, #e2e2e2 10px, #e2e2e2 20px);
+	color: var(--color-on-surface-variant);
+	font-size: var(--text-caps);
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}

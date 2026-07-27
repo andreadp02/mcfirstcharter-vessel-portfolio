@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURELIAN - Vessel Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#baeaff",
+                        "inverse-primary": "#afc8f0",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#002e5d",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary-container": "#2891b2",
+                        "tertiary-fixed-dim": "#76d2f6",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary-container": "#6f88ad",
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#005eb2",
+                        "surface-tint": "#476083",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed-variant": "#004d62",
+                        "tertiary": "#00070b",
+                        "on-secondary-fixed-variant": "#004788",
+                        "primary-container": "#001f3f",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#001b3b",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#001f29",
+                        "on-primary-fixed": "#001c3a",
+                        "primary": "#000613",
+                        "outline-variant": "#c4c6cf",
+                        "outline": "#74777f",
+                        "secondary-container": "#4597fe",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8e8",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#00222d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .maritime-shadow { box-shadow: 0 12px 32px rgba(0, 31, 63, 0.08); }
+        .divider-seafoam { border-color: #7FDBFF; }
+        .text-seafoam { color: #7FDBFF; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto hidden md:flex">
+<a class="font-display-lg text-headline-sm tracking-tighter text-primary dark:text-primary-fixed" href="#">
+                AURELIAN
+            </a>
+<div class="flex items-center gap-8 font-body-md text-body-md">
+<a class="text-secondary dark:text-secondary-fixed-dim font-semibold border-b-2 border-secondary pb-1" href="#">Vessel</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Itineraries</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">About Us</a>
+</div>
+<a class="bg-primary-container text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:opacity-90 transition-opacity" href="#">
+                Rent Now
+            </a>
+</div>
+<!-- Mobile Nav Placeholder (Minimal) -->
+<div class="flex justify-between items-center px-margin-mobile py-4 md:hidden">
+<a class="font-display-lg-mobile text-headline-sm tracking-tighter text-primary" href="#">AURELIAN</a>
+<button><span class="material-symbols-outlined text-primary">menu</span></button>
+</div>
+</nav>
+<main class="pt-24 pb-section-gap">
+<!-- Hero Gallery Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap pt-8">
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 rounded bg-surface-container-low overflow-hidden relative group">
+<img alt="Vessel Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sweeping, majestic wide-angle shot of a sleek modern luxury sailing yacht cutting through deep azure blue waters. The yacht features pristine white fiberglass and polished teak decking. Sunlight reflects brilliantly off the hull, creating a serene, high-end maritime atmosphere under a clear, cloudless sky. Minimalist and elegant composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAceeEEsrFyNoqD0MVYYsdv81j-DaWJA7XUadn1OWuTQPjnXJbaXcsfEP_sIkV-38fBITvw1I6JmzNvAcC1n2H6vedNIsMgP2WvapuQiN6Qs4V6jLcIWDLrtcX57akUXrQl96IyLPS7PboktqNYSKepdkkaGSd7r8kEgshMnKAiTF3oRLndX5ntYxwiva5u4mZrDB--WfZDz9pVwHMDLGI-EvTWUD_FSZzYxXhRgYwdHqCh3JNdy7Hl7NzKi7_2l7v0YudfTj14gas"/>
+</div>
+<div class="hidden md:block rounded bg-surface-container-low overflow-hidden relative group">
+<img alt="Deck Details" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed close-up of a meticulously crafted teak wood deck on a luxury yacht. Clean, parallel lines of the decking lead the eye towards a polished stainless steel winch and taut, white sailing ropes. The lighting is bright and natural, emphasizing the professional, premium craftsmanship and the nautical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrScUuLzS97tUz8R9ReZAkj0_ogh6UJhVXmnGXGsqMEKply7IJ2ScflCXxx8ZMqIym7lAw2CAFy_bRxD0YZN8g5s4EAfC_MOBVzHHbZp8RivLiUA57FD-qhVFp41pYi5q_3Q9jLn_-GCnfmakDZa2FrjrU--EHGFIETlKiyEjXrY3PkT_jb83a97IT733Vc-N1cJAwn-AbTMs4j_Cerg2DZHwx9OIGfLe1SVipz7rIiL36sJd6tRThsp8A_SHJTdapQKR89wUv-MM"/>
+</div>
+<div class="hidden md:block rounded bg-surface-container-low overflow-hidden relative group">
+<img alt="Interior Cabin" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A bright, minimalist interior shot of a luxury yacht cabin. The space features light oak paneling, crisp white linen on a spacious bed, and subtle ambient lighting. Large porthole windows let in brilliant natural sunlight, casting soft shadows. The mood is serene, expansive, and high-end, perfectly balancing traditional maritime warmth with modern luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8scwnuFhBfZeYTD3CLXRo80eo3aXJYBdD_tQli8aFnGqvc8M5ptebcSqm3byaU_Tb73zMaMj3RqlP8xFoRPX1h6fiO_DiY1LTHUK4gX5gKTYSROXcbwEfT2ID2CunJHU4NdFZ2sgwhHlyw0w_2hqRF1nFKbldY7y5cUk4DnY7KKjEaJKj1m_Ujra5WyLvaFX0SKbn8deowFYU89p8xQ9Web88kkq1YHkf4WHkx2_JFEVEEL8k7QomRP_CyDUGLSxhFRg3RBRMrs"/>
+</div>
+<div class="hidden md:block md:col-span-2 rounded bg-surface-container-low overflow-hidden relative group">
+<img alt="Aft Lounge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An expansive view from the aft deck of a luxury sailing yacht looking out over calm, deep blue ocean waters. A sleek, modern lounge area with crisp white cushions invites relaxation. The horizon is perfectly straight, separating the rich blue sea from a vast, clear sky. The overall aesthetic is one of serene freedom and pristine maritime design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3pN27GX8rsCerWPA7_g79pPtTj1Id0tOfyk0--A7NN8AIoUPHywQD3eUHwnRPg27TH-9pXDxbTt8zVJBnmzYFEAiKCvMeAabob-CBIMOkiMZL_IelG0BmV9tn0zNfiUFM6tPAgQTETWq9LLWGdMoGUv29Ypoc44BSElnU9V0D_wqGad3VJbL2S79C0nr34qxRz1QP9YMFgVgerag2JrUs0yOxPfQ-0Gnrb2-G2F3vc4GN5sSWmnpd0NnK-hiGESa5FZghdUqlcgw"/>
+</div>
+</div>
+<div class="mt-12 text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-6">Aurelia II</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A masterpiece of modern maritime engineering, blending the timeless elegance of traditional sailing with unparalleled luxury and performance.</p>
+</div>
+</section>
+<!-- Specifications & Narrative -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Specs Grid -->
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant/30 rounded p-8 h-fit">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-8 flex items-center gap-2 border-b divider-seafoam pb-4">
+<span class="material-symbols-outlined text-seafoam">straighten</span>
+                    Specifications
+                </h3>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<p class="font-label-caps text-label-caps text-primary-container/60 mb-1">LENGTH</p>
+<p class="font-body-md text-body-md text-primary">50ft (15.2m)</p>
+</div>
+<div class="h-px bg-outline-variant/20"></div>
+<div>
+<p class="font-label-caps text-label-caps text-primary-container/60 mb-1">CAPACITY</p>
+<p class="font-body-md text-body-md text-primary">8 Guests</p>
+</div>
+<div class="h-px bg-outline-variant/20"></div>
+<div>
+<p class="font-label-caps text-label-caps text-primary-container/60 mb-1">CABINS</p>
+<p class="font-body-md text-body-md text-primary">4 (2 Master, 2 Twin)</p>
+</div>
+<div class="h-px bg-outline-variant/20"></div>
+<div>
+<p class="font-label-caps text-label-caps text-primary-container/60 mb-1">ENGINE</p>
+<p class="font-body-md text-body-md text-primary">Volvo Penta 75HP</p>
+</div>
+<div class="h-px bg-outline-variant/20"></div>
+<div>
+<p class="font-label-caps text-label-caps text-primary-container/60 mb-1">AMENITIES</p>
+<p class="font-body-md text-body-md text-primary">High-Speed Wi-Fi, Full Galley Kitchen, Climate Control (AC)</p>
+</div>
+</div>
+</div>
+<!-- Narrative -->
+<div class="md:col-span-8 md:pl-12 mt-12 md:mt-0">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">The Spirit of the Sea</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+                        Designed for those who seek the profound tranquility of the open ocean without compromising on refined comfort. Aurelia II cuts through the water with effortless grace, offering a sailing experience that is both exhilarating and supremely stable.
+                    </p>
+<p>
+                        The expansive teak decks invite you to bask in the sun or enjoy al fresco dining under the stars. Below deck, the interior is a sanctuary of light oak and premium textiles, meticulously crafted to provide a sense of expansive space and serene luxury.
+                    </p>
+<div class="my-12 p-8 bg-surface-bright border border-outline-variant/30 rounded relative">
+<span class="material-symbols-outlined absolute top-4 left-4 text-outline/20" style="font-size: 48px;">format_quote</span>
+<p class="font-headline-sm text-headline-sm text-primary italic relative z-10 pl-8 pt-4">
+                            "Sailing her is a revelation. She possesses an agility that thrills, yet offers a stability that allows complete relaxation."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="bg-primary-container py-24 px-8 rounded flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay" data-alt="A dark, moody, and highly professional abstract background featuring deep navy blue ocean waves subtly cresting in low light. The texture is smooth and fluid, evoking a sense of calm, luxurious depth. The lighting highlights gentle ripples, creating a minimalist maritime backdrop suitable for high-end text overlay." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvD-YvAlaHV5ajMO5tJg7jv0H6R8hfwsdaWl5CIATD2qgxHUB9U8Ulqi6IroUKbYzA3dCuwD0WzRyMqI_0H4kwupZP_2NLS8rCV8FCeuEdFSMJVVS_V5ut8izz_Ew6u3XvsWUX9jxVDjYL7Yog9LrAvw4Szg0mFItlobF_eYxGOwYwcoKkeuwgZYesX4bYXC8COwQX9JHsalDrzliAdqI7ei6KFzNxAH_ZHDZjiTKb2NPgZ5SPPkW5joo5eDuA03IpOUQy5Jqz5vw')"></div>
+<h2 class="font-headline-md text-headline-md text-on-primary mb-6 relative z-10">Ready to Chart Your Course?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto mb-10 relative z-10">Secure your dates aboard Aurelia II and prepare for an unforgettable journey across pristine waters.</p>
+<a class="relative z-10 inline-flex items-center gap-2 bg-on-primary text-primary-container px-8 py-4 rounded font-label-md text-label-md hover:bg-secondary-fixed transition-colors maritime-shadow" href="#">
+                    Book Your Journey
+                    <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-tertiary-container w-full mt-section-gap border-t border-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-display-lg text-headline-md text-on-primary-container">AURELIAN</span>
+<p class="font-label-caps text-label-caps text-on-primary-container/70 mt-4">
+                    © 2024 AURELIAN MARITIME. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<div class="flex flex-col gap-4 font-label-caps text-label-caps">
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Instagram</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Facebook</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col gap-4 font-label-caps text-label-caps">
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Contact</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Privacy</a>
+<a class="text-on-primary-container/70 hover:text-tertiary-fixed transition-opacity duration-200" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
