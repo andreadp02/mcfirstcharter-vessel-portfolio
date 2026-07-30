@@ -1,284 +1,529 @@
-// Localized equipment catalog and default-checked items (image + existing equipment)
-export const equipmentCatalog = {
-	it: [
-		{ title: 'Caratteristiche esterne', items: [
-			'Bimini',
-			'Doccia sul ponte',
-			'Tavolo da pranzo',
-			'Impianto stereo',
-			'Cuscini per il pozzetto',
-			'Ponte in teak',
-			'Plancetta di poppa',
-			'Scaletta da bagno',
-			'Rete di sicurezza'
-		] },
-		{ title: 'Comfort a bordo', items: [
-			'Acqua calda',
-			'Dissalatore',
-			'Aria condizionata',
-			'Ventilatori',
-			'Riscaldamento',
-			'Lavatrice',
-			'WC elettrico',
-			'Lenzuola',
-			'Asciugamani',
-			'Teli da spiaggia',
-			'Wi-Fi',
-			'Presa USB',
-			'TV'
-		] },
-		{ title: 'Apparecchiature di navigazione', items: [
-			'Tender',
-			'Motore per tender',
-			'Elica di manovra',
-			'Salpa ancora elettrico',
-			'Winch elettrici',
-			'Pilota automatico',
-			'GPS',
-			'Ecoscandaglio',
-			'VHF',
-			'Telefono satellitare',
-			'Carte nautiche'
-		] },
-		{ title: 'Cucina', items: [
-			'Frigorifero',
-			'Congelatore',
-			'Forno/fornelli',
-			'Barbecue',
-			'Microonde',
-			'Macchina del caffè',
-			'Macchina per il ghiaccio',
-			'Borsa per il ghiaccio',
-			'Lavapiatti'
-		] },
-		{ title: 'Svago', items: [
-			'Tavola da paddle',
-			'Kayak',
-			'Maschera e boccaglio',
-			'Attrezzatura da pesca',
-			'Attrezzatura per immersioni subacquee'
-		] },
-		{ title: 'Vele & attrezzature', items: [
-			'Randa steccata',
-			'Randa avvolgibile',
-			'Spinnaker',
-			'Gennaker',
-			'Genoa avvolgibile',
-			'Vele da regata'
-		] }
-	],
-	en: [
-		{ title: 'Exterior features', items: [
-			'Bimini',
-			'Deck shower',
-			'Dining table',
-			'Stereo system',
-			'Cockpit cushions',
-			'Teak deck',
-			'Swim platform',
-			'Swimming ladder',
-			'Safety net'
-		] },
-		{ title: 'On-board comfort', items: [
-			'Hot water',
-			'Watermaker',
-			'Air conditioning',
-			'Fans',
-			'Heating',
-			'Washing machine',
-			'Electric toilet',
-			'Bed linens',
-			'Towels',
-			'Beach towels',
-			'Wi‑Fi',
-			'USB socket',
-			'TV'
-		] },
-		{ title: 'Navigation equipment', items: [
-			'Tender',
-			'Outboard engine',
-			'Bow thruster',
-			'Electric windlass',
-			'Electric winches',
-			'Autopilot',
-			'GPS',
-			'Depth sounder',
-			'VHF',
-			'Satellite phone',
-			'Nautical charts'
-		] },
-		{ title: 'Galley', items: [
-			'Refrigerator',
-			'Freezer',
-			'Oven/stove',
-			'Barbecue',
-			'Microwave',
-			'Coffee maker',
-			'Ice maker',
-			'Cooler bag',
-			'Dishwasher'
-		] },
-		{ title: 'Leisure', items: [
-			'Paddle board',
-			'Kayak',
-			'Snorkel gear',
-			'Fishing gear',
-			'Diving equipment'
-		] },
-		{ title: 'Sails & rigging', items: [
-			'Full-batten mainsail',
-			'Furling mainsail',
-			'Spinnaker',
-			'Gennaker',
-			'Furling genoa',
-			'Racing sails'
-		] }
-	],
-	es: [
-		{ title: 'Características exteriores', items: [
-			'Bimini',
-			'Ducha en cubierta',
-			'Mesa de comedor',
-			'Equipo de música',
-			'Cojines para bañera',
-			'Cubierta de teka',
-			'Plataforma de baño',
-			'Escalera de baño',
-			'Red de seguridad'
-		] },
-		{ title: 'Confort a bordo', items: [
-			'Agua caliente',
-			'Desalinizador',
-			'Aire acondicionado',
-			'Ventiladores',
-			'Calefacción',
-			'Lavadora',
-			'WC eléctrico',
-			'Sábanas',
-			'Toallas',
-			'Toallas de playa',
-			'Wi‑Fi',
-			'Toma USB',
-			'TV'
-		] },
-		{ title: 'Equipamiento de navegación', items: [
-			'Tender',
-			'Motor para tender',
-			'Hélice de proa',
-			'Molinete eléctrico',
-			'Winches eléctricos',
-			'Piloto automático',
-			'GPS',
-			'Ecosonda',
-			'VHF',
-			'Teléfono satelital',
-			'Cartas náuticas'
-		] },
-		{ title: 'Cocina', items: [
-			'Refrigerador',
-			'Congelador',
-			'Horno/placas',
-			'Barbacoa',
-			'Microondas',
-			'Cafetera',
-			'Máquina de hielo',
-			'Bolsa para hielo',
-			'Lavavajillas'
-		] },
-		{ title: 'Ocio', items: [
-			'Tabla de paddle',
-			'Kayak',
-			'Máscara y tubo',
-			'Equipo de pesca',
-			'Equipo de buceo'
-		] },
-		{ title: 'Velas y aparejos', items: [
-			'Mayor con doctor',
-			'Mayor enrollable',
-			'Spinnaker',
-			'Gennaker',
-			'Génova enrollable',
-			'Velas de regata'
-		] }
-	]
-};
+// Tutti i testi del sito, una voce per lingua. Le chiavi sono identiche nelle tre
+// lingue: se ne aggiungi una in `it`, aggiungila anche in `en` e `es`.
+// I dati non traducibili (foto, email, nome barca) stanno in site.js.
 
-// Items that should appear checked by default (those visible as checked in the provided image
-// plus items already present in boat.equipment). Keep lists localized so comparison is straightforward.
-export const equipmentChecked = {
-	it: [
-		'Bimini',
-		'Tavolo da pranzo',
-		'Impianto stereo',
-		'Cuscini per il pozzetto',
-		'Ponte in teak',
-		'Plancetta di poppa',
-		'Scaletta da bagno',
-		'Acqua calda',
-		'Lenzuola',
-		'Asciugamani',
-		'Presa USB',
-		'Tender',
-		'Motore per tender',
-		'Elica di manovra',
-		'Salpa ancora elettrico',
-		'Pilota automatico',
-		'GPS',
-		'Ecoscandaglio',
-		'Carte nautiche',
-		'Frigorifero',
-		'Forno/fornelli',
-		'Randa avvolgibile',
-		'Genoa avvolgibile'
-	],
-	en: [
-		'Bimini',
-		'Dining table',
-		'Stereo system',
-		'Cockpit cushions',
-		'Teak deck',
-		'Swim platform',
-		'Swimming ladder',
-		'Hot water',
-		'Bed linens',
-		'Towels',
-		'USB socket',
-		'Tender',
-		'Outboard engine',
-		'Bow thruster',
-		'Electric windlass',
-		'Autopilot',
-		'GPS',
-		'Depth sounder',
-		'Nautical charts',
-		'Refrigerator',
-		'Oven/stove',
-		'Furling mainsail',
-		'Furling genoa'
-	],
-	es: [
-		'Bimini',
-		'Mesa de comedor',
-		'Equipo de música',
-		'Cojines para bañera',
-		'Cubierta de teka',
-		'Plataforma de baño',
-		'Escalera de baño',
-		'Agua caliente',
-		'Sábanas',
-		'Toallas',
-		'Toma USB',
-		'Tender',
-		'Motor para tender',
-		'Hélice de proa',
-		'Molinete eléctrico',
-		'Piloto automático',
-		'GPS',
-		'Ecosonda',
-		'Cartas náuticas',
-		'Refrigerador',
-		'Horno/placas',
-		'Mayor enrollable',
-		'Génova enrollable'
-	]
+export const langs = [
+	{ code: 'it', label: 'Italiano' },
+	{ code: 'en', label: 'English' },
+	{ code: 'es', label: 'Español' }
+];
+
+export const defaultLang = 'it';
+
+/** @type {Record<string, any>} */
+export const dict = {
+	it: {
+		tagline: 'Dufour 460 GL "VERA" — crociere a vela tra baie e isole.',
+		cta: 'Richiedi disponibilità',
+		contacts: 'Contatti',
+		menu: 'Menu',
+		language: 'Lingua',
+		nav: [
+			{ href: '/boat', label: 'La Barca' },
+			{ href: '/itineraries', label: 'Itinerari' },
+			{ href: '/about', label: 'Chi Siamo' }
+		],
+		mailSubject: 'Richiesta disponibilità VERA',
+		claim: '14 metri di comfort per vivere il mare con la famiglia o con gli amici.',
+
+		home: {
+			metaDesc:
+				'Noleggio della Dufour 460 GL VERA: 14 metri, 4 cabine, 4 bagni. Crociere settimanali e vacanze relax tra baie e isole.',
+			heroCta: 'Scopri la barca',
+			introTitle: 'Spazio, comfort, mare',
+			introP1:
+				'Elegante e spaziosa, VERA è una Dufour 460 Grand Large ideale per crociere in famiglia o con amici, perfetta per vivere il mare in totale comfort.',
+			introP2:
+				'Ampi spazi interni ed esterni, cabine confortevoli, grande pozzetto prendisole e ottime prestazioni sia a vela che a motore. La disposizione intelligente degli ambienti garantisce privacy e vivibilità anche per gruppi numerosi.',
+			introLink: 'Scheda tecnica e planimetria',
+			aboardOverline: 'A bordo',
+			aboardTitle: 'Tutto quello che serve',
+			highlights: [
+				{ icon: 'bed', title: '4 cabine', text: 'Doppie e confortevoli' },
+				{ icon: 'shower', title: '4 bagni', text: 'Docce interne ed esterne' },
+				{ icon: 'kitchen', title: 'Cucina completa', text: 'Con frigorifero' },
+				{ icon: 'explore', title: 'GPS e autopilota', text: 'Elica di prua' }
+			],
+			galleryOverline: 'Galleria',
+			galleryTitle: 'VERA in immagini',
+			galleryLink: 'Vedi tutte le foto',
+			strengths: [
+				{
+					icon: 'groups',
+					title: 'Ideale per gruppi',
+					text: 'Quattro cabine e quattro bagni: privacy e vivibilità anche per gruppi numerosi.'
+				},
+				{
+					icon: 'sailing',
+					title: 'Ottime prestazioni',
+					text: 'Comportamento brillante sia a vela che a motore, in sicurezza e comfort.'
+				},
+				{
+					icon: 'calendar_month',
+					title: 'Da Maggio a Ottobre',
+					text: 'Crociere settimanali e vacanze relax tra baie e isole.'
+				}
+			],
+			contactTitle: 'Pronti a salpare?',
+			contactText:
+				'Scrivici per verificare le disponibilità e ricevere un preventivo per il tuo periodo.'
+		},
+
+		boat: {
+			metaDesc:
+				'Scheda tecnica, dotazioni, galleria fotografica e planimetria della Dufour 460 GL VERA: 14 metri, 4 cabine, 4 bagni.',
+			lead: 'Elegante e spaziosa, ideale per crociere in famiglia o con amici, perfetta per vivere il mare in totale comfort.',
+			specsTitle: 'Scheda tecnica',
+			// `todo: true` = valore ancora da confermare, viene reso in corsivo grigio
+			specs: [
+				{ label: 'Modello', value: 'Dufour 460 Grand Large' },
+				{ label: 'Lunghezza', value: '14 m' },
+				{ label: 'Larghezza', value: '4,5 m' },
+				{ label: 'Pescaggio', value: '2,2 m' },
+				{ label: 'Cabine', value: '4' },
+				{ label: 'Bagni', value: '4' },
+				{ label: 'Posti letto', value: '10' },
+				{ label: 'Anno', value: '2016' },
+				{ label: 'Consumo carburante', value: '6 L/h' },
+				{ label: 'Velocità di crociera', value: '8 kn' },
+				{ label: 'Motore', value: '75 cv' },
+				{ label: 'Porto base', value: 'da confermare', todo: true }
+			],
+			aboardTitle: 'A bordo di VERA',
+			p1: 'Questa barca a vela di 14 metri offre ampi spazi interni ed esterni, cabine confortevoli, grande pozzetto prendisole e ottime prestazioni sia a vela che a motore. La disposizione intelligente degli ambienti garantisce privacy e vivibilità anche per gruppi numerosi.',
+			p2: 'Ideale per crociere settimanali e vacanze relax tra baie e isole.',
+			equipmentTitle: 'Dotazioni e Planimetria',
+			equipment: [
+				'4 cabine',
+				'4 bagni',
+				'Cucina completa',
+				'Frigorifero',
+				'Docce interne ed esterne',
+				'GPS cartografico',
+				'Autopilota',
+				'Bimini',
+				'Ampio prendisole',
+				'Elica di prua'
+			],
+			galleryOverline: 'Galleria',
+			galleryTitle: 'Interni ed esterni',
+			ctaTitle: 'Vuoi salire a bordo?',
+			ctaText: 'Contattaci per disponibilità e preventivo.'
+		},
+
+		itineraries: {
+			metaDesc:
+				'Itinerari a vela a bordo di VERA, Dufour 460 GL: weekend, settimane e crociere relax tra baie e isole.',
+			title: 'Itinerari',
+			lead: 'Crociere settimanali e vacanze relax tra baie e isole. Ogni rotta viene adattata al meteo, al vento e ai desideri dell’equipaggio.',
+			durationLabel: 'Durata',
+			paceLabel: 'Ritmo',
+			ask: 'Chiedi informazioni',
+			// TODO: sostituire con gli itinerari reali
+			items: [
+				{
+					title: 'Weekend',
+					duration: '2–3 giorni',
+					pace: 'Relax',
+					text: 'Una fuga breve tra le baie più vicine, con soste per il bagno e cena a bordo o in porto.'
+				},
+				{
+					title: 'Settimana tra le isole',
+					duration: '7 giorni',
+					pace: 'Medio',
+					text: 'L’itinerario classico: tappe giornaliere brevi, ancoraggi in baie riparate e una nuova isola ogni giorno.'
+				},
+				{
+					title: 'Su misura',
+					duration: 'A scelta',
+					pace: 'Su richiesta',
+					text: 'Hai già in mente una rotta? Costruiamo insieme il percorso in base ai giorni disponibili e all’equipaggio.'
+				}
+			],
+			note: 'Le rotte vengono definite insieme prima della partenza, tenendo conto delle condizioni meteo.'
+		},
+
+		about: {
+			metaDesc: 'McFirst Charter: chi siamo e come lavoriamo a bordo di VERA, Dufour 460 GL.',
+			heroTitle: 'Il mare, condiviso.',
+			storyTitle: 'La nostra storia',
+			// TODO: riscrivere con la storia reale di McFirst Charter
+			p1: 'McFirst Charter nasce dalla passione per il mare e dal desiderio di condividerla. VERA, la nostra Dufour 460 Grand Large, è pensata per far vivere il mare in totale comfort a famiglie e gruppi di amici.',
+			p2: 'Curiamo la barca nei dettagli e prepariamo ogni crociera insieme a chi salpa: rotta, tappe e ritmo si costruiscono sulle vostre esigenze, non su un pacchetto prestabilito.',
+			valuesTitle: 'Come lavoriamo',
+			values: [
+				{
+					icon: 'directions_boat',
+					title: 'Barca pronta',
+					text: 'Manutenzione, dotazioni di sicurezza e pulizia verificate prima di ogni partenza.'
+				},
+				{
+					icon: 'map',
+					title: 'Rotta condivisa',
+					text: 'L’itinerario si decide insieme, adattandolo a meteo, vento e ritmo dell’equipaggio.'
+				},
+				{
+					icon: 'support_agent',
+					title: 'Sempre reperibili',
+					text: 'Un riferimento a terra per qualsiasi necessità durante tutta la crociera.'
+				}
+			],
+			ctaTitle: 'Parliamone',
+			ctaText: 'Raccontaci quando vorresti partire e con quante persone.'
+		},
+
+		photoAlts: [
+			'VERA in navigazione',
+			'Pozzetto e prendisole',
+			'Coperta',
+			'Quadrato interno',
+			'VERA all’ancora',
+			'Cabina armatoriale',
+			'Cabina ospiti',
+			'Cucina',
+			'Timoneria'
+		],
+		layoutAlt: 'Planimetria della Dufour 460 GL VERA'
+	},
+
+	en: {
+		tagline: 'Dufour 460 GL "VERA" — sailing holidays among bays and islands.',
+		cta: 'Check availability',
+		contacts: 'Contact',
+		menu: 'Menu',
+		language: 'Language',
+		nav: [
+			{ href: '/boat', label: 'The Boat' },
+			{ href: '/itineraries', label: 'Itineraries' },
+			{ href: '/about', label: 'About Us' }
+		],
+		mailSubject: 'VERA availability request',
+		claim: '14 metres of comfort to enjoy the sea with family or friends.',
+
+		home: {
+			metaDesc:
+				'Charter the Dufour 460 GL VERA: 14 metres, 4 cabins, 4 heads. Weekly cruises, weekends and relaxing holidays among bays and islands.',
+			heroCta: 'Discover the boat',
+			introTitle: 'Space, comfort, sea',
+			introP1:
+				'Elegant and spacious, VERA is a Dufour 460 Grand Large made for cruising with family or friends, perfect for enjoying the sea in total comfort.',
+			introP2:
+				'Generous space inside and out, comfortable cabins, a large sun-deck cockpit and excellent performance under both sail and engine. The clever layout keeps privacy and liveability even with large groups on board.',
+			introLink: 'Specifications and deck plan',
+			aboardOverline: 'On board',
+			aboardTitle: 'Everything you need',
+			highlights: [
+				{ icon: 'bed', title: '4 cabins', text: 'Comfortable doubles' },
+				{ icon: 'shower', title: '4 heads', text: 'Indoor and outdoor showers' },
+				{ icon: 'kitchen', title: 'Full galley', text: 'With refrigerator' },
+				{ icon: 'explore', title: 'GPS and autopilot', text: 'Bow thruster' }
+			],
+			galleryOverline: 'Gallery',
+			galleryTitle: 'VERA in pictures',
+			galleryLink: 'See all photos',
+			strengths: [
+				{
+					icon: 'groups',
+					title: 'Ideal for groups',
+					text: 'Four cabins and four heads: privacy and liveability even for large groups.'
+				},
+				{
+					icon: 'sailing',
+					title: 'Great performance',
+					text: 'Lively behaviour under sail and engine alike, in safety and comfort.'
+				},
+				{
+					icon: 'calendar_month',
+					title: 'From May to October',
+					text: 'Weekly cruises and relaxing holidays among bays and islands.'
+				}
+			],
+			contactTitle: 'Ready to set sail?',
+			contactText: 'Write to us to check availability and get a quote for your dates.'
+		},
+
+		boat: {
+			metaDesc:
+				'Specifications, equipment, photo gallery and deck plan of the Dufour 460 GL VERA: 14 metres, 4 cabins, 4 heads.',
+			lead: 'Elegant and spacious, ideal for cruising with family or friends, perfect for enjoying the sea in total comfort.',
+			specsTitle: 'Specifications',
+			specs: [
+				{ label: 'Model', value: 'Dufour 460 Grand Large' },
+				{ label: 'Length', value: '14.15 m' },
+				{ label: 'Beam', value: '4.5 m' },
+				{ label: 'Draft', value: '2.2 m' },
+				{ label: 'Cabins', value: '4' },
+				{ label: 'Heads', value: '4' },
+				{ label: 'Berths', value: '10' },
+				{ label: 'Year', value: '2016' },
+				{ label: 'Fuel consumption', value: '6 L/h' },
+				{ label: 'Cruising speed', value: '8 kn' },
+				{ label: 'Engine', value: '75 hp' },
+				{ label: 'Home port', value: 'to be confirmed', todo: true }
+			],
+			aboardTitle: 'On board VERA',
+			p1: 'This 14-metre sailing yacht offers generous space inside and out, comfortable cabins, a large sun-deck cockpit and excellent performance under both sail and engine. The clever layout keeps privacy and liveability even with large groups on board.',
+			p2: 'Ideal for weekly cruises, weekends and relaxing holidays among bays and islands.',
+			equipmentTitle: 'Equipment and boat layout',
+			equipment: [
+				'4 cabins',
+				'4 heads',
+				'Full galley',
+				'Refrigerator',
+				'Indoor and outdoor showers',
+				'Chart plotter GPS',
+				'Autopilot',
+				'Bimini',
+				'Large sun deck',
+				'Bow thruster'
+			],
+			galleryOverline: 'Gallery',
+			galleryTitle: 'Inside and out',
+			ctaTitle: 'Want to come aboard?',
+			ctaText: 'Get in touch for availability and a quote.'
+		},
+
+		itineraries: {
+			metaDesc:
+				'Sailing itineraries aboard VERA, Dufour 460 GL: weekends, weeks and relaxing cruises among bays and islands.',
+			title: 'Itineraries',
+			lead: 'Weekly cruises, weekends and relaxing holidays among bays and islands. Every route is adapted to the weather, the wind and the crew’s wishes.',
+			durationLabel: 'Duration',
+			paceLabel: 'Pace',
+			ask: 'Ask for details',
+			items: [
+				{
+					title: 'Weekend',
+					duration: '2–3 days',
+					pace: 'Relaxed',
+					text: 'A short escape to the nearest bays, with swim stops and dinner on board or ashore.'
+				},
+				{
+					title: 'A week among the islands',
+					duration: '7 days',
+					pace: 'Moderate',
+					text: 'The classic route: short daily legs, anchorages in sheltered bays and a new island every day.'
+				},
+				{
+					title: 'Tailor-made',
+					duration: 'Your choice',
+					pace: 'On request',
+					text: 'Already have a route in mind? We plan it together around your dates and your crew.'
+				}
+			],
+			note: 'Routes are agreed together before departure, taking the weather into account.'
+		},
+
+		about: {
+			metaDesc: 'McFirst Charter: who we are and how we work aboard VERA, Dufour 460 GL.',
+			heroTitle: 'The sea, shared.',
+			storyTitle: 'Our story',
+			p1: 'McFirst Charter was born from a passion for the sea and the wish to share it. VERA, our Dufour 460 Grand Large, is set up to let families and groups of friends enjoy the sea in total comfort.',
+			p2: 'We look after the boat down to the details and prepare every cruise together with those sailing: route, stops and pace are built around your needs, not around a fixed package.',
+			valuesTitle: 'How we work',
+			values: [
+				{
+					icon: 'directions_boat',
+					title: 'Boat ready',
+					text: 'Maintenance, safety equipment and cleaning checked before every departure.'
+				},
+				{
+					icon: 'map',
+					title: 'A shared route',
+					text: 'The itinerary is decided together, adapted to weather, wind and the crew’s pace.'
+				},
+				{
+					icon: 'support_agent',
+					title: 'Always reachable',
+					text: 'A point of contact ashore for anything you need throughout the cruise.'
+				}
+			],
+			ctaTitle: 'Let’s talk',
+			ctaText: 'Tell us when you would like to sail and how many you are.'
+		},
+
+		photoAlts: [
+			'VERA under sail',
+			'Cockpit and sun deck',
+			'Deck',
+			'Saloon',
+			'VERA at anchor',
+			'Master cabin',
+			'Guest cabin',
+			'Galley',
+			'Helm station'
+		],
+		layoutAlt: 'Deck plan of the Dufour 460 GL VERA'
+	},
+
+	es: {
+		tagline: 'Dufour 460 GL "VERA" — cruceros a vela entre calas e islas.',
+		cta: 'Consultar disponibilidad',
+		contacts: 'Contacto',
+		menu: 'Menú',
+		language: 'Idioma',
+		nav: [
+			{ href: '/boat', label: 'El Barco' },
+			{ href: '/itineraries', label: 'Itinerarios' },
+			{ href: '/about', label: 'Quiénes Somos' }
+		],
+		mailSubject: 'Consulta de disponibilidad VERA',
+		claim: '14 metros de confort para vivir el mar en familia o con amigos.',
+
+		home: {
+			metaDesc:
+				'Alquiler del Dufour 460 GL VERA: 14 metros, 4 camarotes, 4 baños. Cruceros semanales, fines de semana y vacaciones relax entre calas e islas.',
+			heroCta: 'Descubre el barco',
+			introTitle: 'Espacio, confort, mar',
+			introP1:
+				'Elegante y espacioso, VERA es un Dufour 460 Grand Large ideal para cruceros en familia o con amigos, perfecto para vivir el mar con total confort.',
+			introP2:
+				'Amplios espacios interiores y exteriores, camarotes confortables, gran bañera solárium y excelentes prestaciones tanto a vela como a motor. La distribución inteligente garantiza privacidad y habitabilidad incluso con grupos numerosos.',
+			introLink: 'Ficha técnica y plano',
+			aboardOverline: 'A bordo',
+			aboardTitle: 'Todo lo que necesitas',
+			highlights: [
+				{ icon: 'bed', title: '4 camarotes', text: 'Dobles y confortables' },
+				{ icon: 'shower', title: '4 baños', text: 'Duchas interiores y exteriores' },
+				{ icon: 'kitchen', title: 'Cocina completa', text: 'Con frigorífico' },
+				{ icon: 'explore', title: 'GPS y piloto automático', text: 'Hélice de proa' }
+			],
+			galleryOverline: 'Galería',
+			galleryTitle: 'VERA en imágenes',
+			galleryLink: 'Ver todas las fotos',
+			strengths: [
+				{
+					icon: 'groups',
+					title: 'Ideal para grupos',
+					text: 'Cuatro camarotes y cuatro baños: privacidad y habitabilidad incluso para grupos numerosos.'
+				},
+				{
+					icon: 'sailing',
+					title: 'Excelentes prestaciones',
+					text: 'Comportamiento brillante tanto a vela como a motor, con seguridad y confort.'
+				},
+				{
+					icon: 'calendar_month',
+					title: 'De mayo a octubre',
+					text: 'Cruceros semanales y vacaciones relax entre calas e islas.'
+				}
+			],
+			contactTitle: '¿Listos para zarpar?',
+			contactText:
+				'Escríbenos para consultar la disponibilidad y recibir un presupuesto para tus fechas.'
+		},
+
+		boat: {
+			metaDesc:
+				'Ficha técnica, equipamiento, galería fotográfica y plano del Dufour 460 GL VERA: 14 metros, 4 camarotes, 4 baños.',
+			lead: 'Elegante y espacioso, ideal para cruceros en familia o con amigos, perfecto para vivir el mar con total confort.',
+			specsTitle: 'Ficha técnica',
+			specs: [
+				{ label: 'Modelo', value: 'Dufour 460 Grand Large' },
+				{ label: 'Eslora', value: '14 m' },
+				{ label: 'Manga', value: '4,5 m' },
+				{ label: 'Calado', value: '2,2 m' },
+				{ label: 'Camarotes', value: '4' },
+				{ label: 'Baños', value: '4' },
+				{ label: 'Plazas', value: '10' },
+				{ label: 'Año', value: '2016' },
+				{ label: 'Consumo de combustible', value: '6 L/h' },
+				{ label: 'Velocidad de crucero', value: '8 kn' },
+				{ label: 'Motor', value: '75 CV' },
+				{ label: 'Puerto base', value: 'por confirmar', todo: true }
+			],
+			aboardTitle: 'A bordo de VERA',
+			p1: 'Este velero de 14 metros ofrece amplios espacios interiores y exteriores, camarotes confortables, gran bañera solárium y excelentes prestaciones tanto a vela como a motor. La distribución inteligente garantiza privacidad y habitabilidad incluso con grupos numerosos.',
+			p2: 'Ideal para cruceros semanales, fines de semana y vacaciones relax entre calas e islas.',
+			equipmentTitle: 'Equipamiento y plano de distribución',
+			equipment: [
+				'4 camarotes',
+				'4 baños',
+				'Cocina completa',
+				'Frigorífico',
+				'Duchas interiores y exteriores',
+				'GPS cartográfico',
+				'Piloto automático',
+				'Bimini',
+				'Amplio solárium',
+				'Hélice de proa'
+			],
+			galleryOverline: 'Galería',
+			galleryTitle: 'Interiores y exteriores',
+			ctaTitle: '¿Quieres subir a bordo?',
+			ctaText: 'Contáctanos para disponibilidad y presupuesto.'
+		},
+
+		itineraries: {
+			metaDesc:
+				'Itinerarios a vela a bordo de VERA, Dufour 460 GL: fines de semana, semanas y cruceros relax entre calas e islas.',
+			title: 'Itinerarios',
+			lead: 'Cruceros semanales, fines de semana y vacaciones relax entre calas e islas. Cada ruta se adapta al tiempo, al viento y a los deseos de la tripulación.',
+			durationLabel: 'Duración',
+			paceLabel: 'Ritmo',
+			ask: 'Pide información',
+			items: [
+				{
+					title: 'Fin de semana',
+					duration: '2–3 días',
+					pace: 'Relax',
+					text: 'Una escapada corta entre las calas más cercanas, con paradas de baño y cena a bordo o en puerto.'
+				},
+				{
+					title: 'Una semana entre islas',
+					duration: '7 días',
+					pace: 'Medio',
+					text: 'El itinerario clásico: etapas diarias cortas, fondeos en calas resguardadas y una isla nueva cada día.'
+				},
+				{
+					title: 'A medida',
+					duration: 'A elegir',
+					pace: 'Bajo petición',
+					text: '¿Ya tienes una ruta en mente? La construimos juntos según los días disponibles y la tripulación.'
+				}
+			],
+			note: 'Las rutas se definen juntos antes de zarpar, teniendo en cuenta las condiciones meteorológicas.'
+		},
+
+		about: {
+			metaDesc: 'McFirst Charter: quiénes somos y cómo trabajamos a bordo de VERA, Dufour 460 GL.',
+			heroTitle: 'El mar, compartido.',
+			storyTitle: 'Nuestra historia',
+			p1: 'McFirst Charter nace de la pasión por el mar y del deseo de compartirla. VERA, nuestro Dufour 460 Grand Large, está pensado para que familias y grupos de amigos vivan el mar con total confort.',
+			p2: 'Cuidamos el barco al detalle y preparamos cada crucero junto a quien zarpa: ruta, escalas y ritmo se construyen sobre vuestras necesidades, no sobre un paquete prefijado.',
+			valuesTitle: 'Cómo trabajamos',
+			values: [
+				{
+					icon: 'directions_boat',
+					title: 'Barco listo',
+					text: 'Mantenimiento, equipo de seguridad y limpieza verificados antes de cada salida.'
+				},
+				{
+					icon: 'map',
+					title: 'Ruta compartida',
+					text: 'El itinerario se decide juntos, adaptándolo al tiempo, al viento y al ritmo de la tripulación.'
+				},
+				{
+					icon: 'support_agent',
+					title: 'Siempre localizables',
+					text: 'Una referencia en tierra para cualquier necesidad durante todo el crucero.'
+				}
+			],
+			ctaTitle: 'Hablemos',
+			ctaText: 'Cuéntanos cuándo quieres zarpar y cuántos sois.'
+		},
+
+		photoAlts: [
+			'VERA navegando',
+			'Bañera y solárium',
+			'Cubierta',
+			'Salón',
+			'VERA fondeado',
+			'Camarote armador',
+			'Camarote de invitados',
+			'Cocina',
+			'Puesto de gobierno'
+		],
+		layoutAlt: 'Plano del Dufour 460 GL VERA'
+	}
 };

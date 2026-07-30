@@ -64,6 +64,213 @@ html {
 	user-select: none;
 }
 
+/* Comparsa allo scorrimento del mockup "immersive reveal" (vedi src/lib/reveal.js:
+   .reveal la mette il JS, quindi senza JS le sezioni restano visibili). */
+@keyframes reveal-up {
+	from {
+		opacity: 0;
+		translate: 0 40px;
+	}
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
+}
+
+/* il ritardo è la rete di sicurezza: se l'observer non scatta (tab in secondo
+   piano, browser strani) la sezione compare comunque da sola dopo 3s */
+.reveal {
+	animation: reveal-up 0.8s ease-out 3s both;
+}
+
+.reveal-in {
+	animation-delay: 0s;
+}
+
+/* ---------------------------------------------------------------------------
+   Pagina barca — "l'oblò". Un'idea sola portata per tutta la pagina: ogni foto
+   è più alta del suo ritaglio e risale più lenta dello scorrimento, e la
+   cornice si apre come un boccaporto quando entra in campo.
+   Tutto con le scroll-driven animations del browser: nessun listener, nessuna
+   dipendenza. Dove `view()` non esiste resta il fade di src/lib/reveal.js.
+   --------------------------------------------------------------------------- */
+
+/* L'apertura del riquadro in testa avviene al caricamento, non allo
+   scorrimento: è il gesto da cui il resto della pagina prende il tema. */
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes hatch-open {
+		from {
+			clip-path: inset(44% 0);
+		}
+		to {
+			clip-path: inset(0 0);
+		}
+	}
+
+	@keyframes lede-rise {
+		from {
+			opacity: 0;
+			translate: 0 16px;
+		}
+		to {
+			opacity: 1;
+			translate: 0 0;
+		}
+	}
+
+	.hero-open {
+		animation: hatch-open 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+
+	.hero-lede > * {
+		animation: lede-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+	.hero-lede > *:nth-child(2) {
+		animation-delay: 0.08s;
+	}
+	.hero-lede > *:nth-child(3) {
+		animation-delay: 0.16s;
+	}
+}
+
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		/* la durata la detta lo scorrimento, non un timer: `auto` + view() */
+		.drift > img,
+		.drift-deep > img,
+		.open-frame,
+		.settle,
+		.tick,
+		.hero-lede {
+			animation-timeline: view();
+			animation-duration: auto;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
+		}
+
+		/* la foto scorre dentro il ritaglio: l'immagine eccede in altezza e il
+		   margine di manovra sta tutto dentro l'eccedenza, così copre sempre */
+		@keyframes photo-drift {
+			from {
+				translate: 0 -20%;
+			}
+			to {
+				translate: 0 -3%;
+			}
+		}
+		@keyframes photo-drift-deep {
+			from {
+				translate: 0 -26%;
+			}
+			to {
+				translate: 0 -3%;
+			}
+		}
+
+		.drift > img {
+			height: 125%;
+			animation-name: photo-drift;
+			animation-range: cover 0% cover 100%;
+		}
+		/* fascia a tutta larghezza: più corsa, si vede da più lontano */
+		.drift-deep > img {
+			height: 140%;
+			animation-name: photo-drift-deep;
+			animation-range: cover 0% cover 100%;
+		}
+
+		/* il boccaporto. clip-path si interseca con overflow-hidden + rounded,
+		   quindi gli angoli restano arrotondati senza ripetere qui il raggio */
+		@keyframes hatch-widen {
+			from {
+				clip-path: inset(16% 0);
+			}
+			to {
+				clip-path: inset(0 0);
+			}
+		}
+		.open-frame {
+			animation-name: hatch-widen;
+			animation-range: entry 0% entry 90%;
+		}
+
+		/* il testo si assesta accanto alla foto */
+		@keyframes settle {
+			from {
+				opacity: 0.2;
+				translate: 0 20px;
+			}
+			to {
+				opacity: 1;
+				translate: 0 0;
+			}
+		}
+		.settle {
+			animation-name: settle;
+			animation-range: cover 0% cover 32%;
+		}
+
+		/* righe di un elenco: nessun delay, le sfalsa la loro stessa posizione */
+		@keyframes tick-in {
+			from {
+				opacity: 0;
+				translate: 0 12px;
+			}
+			to {
+				opacity: 1;
+				translate: 0 0;
+			}
+		}
+		.tick {
+			animation-name: tick-in;
+			animation-range: cover 0% cover 14%;
+		}
+
+		/* il nome della barca sprofonda mentre esce dall'alto */
+		/* niente `filter` nel from: il valore implicito è `none`, così durante il
+		   riempimento all'indietro il titolo non resta dentro un layer sfocato */
+		@keyframes lede-sink {
+			from {
+				opacity: 1;
+				translate: 0 0;
+			}
+			to {
+				opacity: 0;
+				translate: 0 48px;
+				filter: blur(5px);
+			}
+		}
+		.hero-lede {
+			animation-name: lede-sink;
+			animation-range: exit 0% exit 100%;
+		}
+	}
+}
+
+/* sfondo animato della CTA */
+@keyframes gradient-shift {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+.gradient-sea {
+	background-image: linear-gradient(120deg, #001f3f, #004788, #001f3f);
+	background-size: 200% 200%;
+	animation: gradient-shift 15s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.gradient-sea {
+		animation: none;
+	}
+}
+
 /* segnaposto mostrato da <Img> finché la foto non è in static/img/ */
 .img-placeholder {
 	display: flex;
