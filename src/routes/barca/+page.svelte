@@ -6,93 +6,16 @@
 	const bento = rest.slice(0, 3); // foto 02-04 accanto alla grande
 	const gallery = rest.slice(3); // foto 05-09
 
-	// Catalogo completo delle dotazioni, organizzato per categorie.
-	// Le voci presenti in `boat.equipment` appariranno come caselle spuntate.
-	const equipmentCatalog = [
-		{
-			title: 'Caratteristiche esterne',
-			items: [
-				'Tendalino',
-				'Doccia sul ponte',
-				'Tavolo da pranzo',
-				'Impianto stereo',
-				'Cuscini per il pozzetto',
-				'Ponte in teak',
-				'Plancetta di poppa',
-				'Scaletta da bagno',
-				'Rete di sicurezza'
-			]
-		},
-		{
-			title: 'Comfort a bordo',
-			items: [
-				'Acqua calda',
-				'Dissalatore',
-				'Aria condizionata',
-				'Ventilatori',
-				'Riscaldamento',
-				'Lavatrice',
-				'WC elettrico',
-				'Lenzuola',
-				'Asciugamani',
-				'Teli da spiaggia',
-				'Wi-Fi',
-				'Presa USB',
-				'TV'
-			]
-		},
-		{
-			title: 'Apparecchiature di navigazione',
-			items: [
-				'Tender',
-				'Motore per tender',
-				'Elica di manovra',
-				'Salpa ancora elettrico',
-				'Winch elettrici',
-				'Pilota automatico',
-				'GPS',
-				'Ecoscandaglio',
-				'VHF',
-				'Telefono satellitare',
-				'Carte nautiche'
-			]
-		},
-		{
-			title: 'Cucina',
-			items: [
-				'Frigorifero',
-				'Congelatore',
-				'Forno/fornelli',
-				'Barbecue',
-				'Microonde',
-				'Macchina del caffè',
-				'Macchina per il ghiaccio',
-				'Borsa per il ghiaccio',
-				'Lavapiatti'
-			]
-		},
-		{
-			title: 'Svago',
-			items: [
-				'Tavola da paddle',
-				'Kayak',
-				'Maschera e boccaglio',
-				'Attrezzatura da pesca',
-				'Attrezzatura per immersioni subacquee'
-			]
-		},
-		{
-			title: 'Vele & attrezzature',
-			items: [
-				'Randa steccata',
-				'Randa avvolgibile',
-				'Spinnaker',
-				'Gennaker',
-				'Genoa avvolgibile',
-				'Vele da regata'
-			]
-		}
-	];
+	import { equipmentCatalog as _equipmentCatalog, equipmentChecked as _equipmentChecked } from '$lib/i18n';
+
+	// Determine language from document if available (fallback to Italian)
+	let lang = 'it';
+	if (typeof document !== 'undefined' && document.documentElement?.lang) {
+		lang = document.documentElement.lang.slice(0, 2);
+	}
+
+	const equipmentCatalog = _equipmentCatalog[lang] || _equipmentCatalog.it;
+	const equipmentChecked = _equipmentChecked[lang] || _equipmentChecked.it;
 </script>
 
 <svelte:head>
@@ -186,7 +109,7 @@
 						<ul class="space-y-3">
 							{#each category.items as item}
 								<li class="flex items-center gap-3">
-									<input type="checkbox" disabled {checked: boat.equipment.includes(item)} class="h-4 w-4 rounded text-primary" />
+									<input type="checkbox" disabled checked={boat.equipment.includes(item) || equipmentChecked.includes(item)} class="h-4 w-4 rounded text-primary" />
 									<span class="text-on-surface-variant">{item}</span>
 								</li>
 							{/each}
