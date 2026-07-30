@@ -5,6 +5,17 @@
 	const [hero, ...rest] = boat.photos;
 	const bento = rest.slice(0, 3); // foto 02-04 accanto alla grande
 	const gallery = rest.slice(3); // foto 05-09
+
+	import { equipmentCatalog as _equipmentCatalog, equipmentChecked as _equipmentChecked } from '$lib/i18n';
+
+	// Determine language from document if available (fallback to Italian)
+	let lang = 'it';
+	if (typeof document !== 'undefined' && document.documentElement?.lang) {
+		lang = document.documentElement.lang.slice(0, 2);
+	}
+
+	const equipmentCatalog = _equipmentCatalog[lang] || _equipmentCatalog.it;
+	const equipmentChecked = _equipmentChecked[lang] || _equipmentChecked.it;
 </script>
 
 <svelte:head>
@@ -91,14 +102,21 @@
 			</div>
 
 			<h3 class="mt-12 mb-6 font-display text-headline-sm text-primary">Dotazioni</h3>
-			<ul class="grid grid-cols-1 gap-4 text-body text-on-surface-variant sm:grid-cols-2">
-				{#each boat.equipment as item (item)}
-					<li class="flex items-center gap-3">
-						<span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check</span>
-						{item}
-					</li>
+			<div class="grid grid-cols-1 gap-6 text-body text-on-surface-variant sm:grid-cols-2 lg:grid-cols-3">
+				{#each equipmentCatalog as category}
+					<div>
+						<dt class="mb-3 text-caps text-primary-container/60 uppercase">{category.title}</dt>
+						<ul class="space-y-3">
+							{#each category.items as item}
+								<li class="flex items-center gap-3">
+									<input type="checkbox" disabled checked={boat.equipment.includes(item) || equipmentChecked.includes(item)} class="h-4 w-4 rounded text-primary" />
+									<span class="text-on-surface-variant">{item}</span>
+								</li>
+							{/each}
+						</ul>
+					</div>
 				{/each}
-			</ul>
+			</div>
 		</div>
 	</section>
 
