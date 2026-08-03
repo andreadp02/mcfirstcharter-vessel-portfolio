@@ -5,6 +5,7 @@
 	let { data } = $props();
 	const t = $derived(data.t);
 	const a = $derived(data.t.about);
+	const p = $derived(data.photos.about);
 </script>
 
 <svelte:head>
@@ -19,8 +20,8 @@
 	>
 		<div class="absolute inset-0 z-0">
 			<Img
-				src={data.photos[2].src}
-				alt={data.photos[2].alt}
+				src={p.hero.src}
+				alt={p.hero.alt}
 				loading="eager"
 				class="h-full w-full object-cover"
 			/>
@@ -40,8 +41,8 @@
 					class="aspect-square overflow-hidden rounded-full border border-outline-variant/30 bg-surface-variant"
 				>
 					<Img
-						src={data.photos[5].src}
-						alt={data.photos[5].alt}
+						src={p.portrait.src}
+						alt={p.portrait.alt}
 						class="h-full w-full object-cover"
 					/>
 				</div>

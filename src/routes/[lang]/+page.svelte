@@ -5,6 +5,7 @@
 	let { data } = $props();
 	const t = $derived(data.t);
 	const h = $derived(data.t.home);
+	const p = $derived(data.photos.home);
 </script>
 
 <svelte:head>
@@ -19,8 +20,8 @@
 	>
 		<div class="absolute inset-0 z-0">
 			<Img
-				src={data.photos[0].src}
-				alt={data.photos[0].alt}
+				src={p.hero.src}
+				alt={p.hero.alt}
 				loading="eager"
 				class="h-full w-full object-cover"
 			/>
@@ -72,8 +73,8 @@
 					class="aspect-4/5 w-full overflow-hidden rounded border border-outline-variant/30 bg-surface-variant"
 				>
 					<Img
-						src={data.photos[1].src}
-						alt={data.photos[1].alt}
+						src={p.intro.src}
+						alt={p.intro.alt}
 						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
 					/>
 				</div>
@@ -118,7 +119,7 @@
 			</a>
 		</div>
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-			{#each data.photos.slice(5, 8) as photo (photo.src)}
+			{#each p.gallery as photo (photo.src)}
 				<div
 					class="aspect-4/3 overflow-hidden rounded border border-outline-variant/30 bg-surface-variant"
 				>

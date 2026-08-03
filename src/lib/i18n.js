@@ -195,18 +195,19 @@ export const dict = {
 			ctaText: 'Raccontaci quando vorresti partire e con quante persone.'
 		},
 
-		photoAlts: [
-			'VERA in navigazione',
-			'Pozzetto e prendisole',
-			'Coperta',
-			'Quadrato interno',
-			'VERA all’ancora',
-			'Cabina armatoriale',
-			'Cabina ospiti',
-			'Cucina',
-			'Timoneria'
-		],
-		layoutAlt: 'Planimetria della Dufour 460 GL VERA'
+		// chiave = nome del file (senza estensione) in static/img/<pagina>/
+		photoAlts: {
+			sailing: 'VERA in navigazione',
+			cockpit: 'Pozzetto e prendisole',
+			deck: 'Coperta',
+			saloon: 'Quadrato interno',
+			'at-anchor': 'VERA all’ancora',
+			'master-cabin': 'Cabina armatoriale',
+			'guest-cabin': 'Cabina ospiti',
+			galley: 'Cucina',
+			helm: 'Timoneria',
+			'deck-plan': 'Planimetria della Dufour 460 GL VERA'
+		}
 	},
 
 	en: {
@@ -388,18 +389,18 @@ export const dict = {
 			ctaText: 'Tell us when you would like to sail and how many you are.'
 		},
 
-		photoAlts: [
-			'VERA under sail',
-			'Cockpit and sun deck',
-			'Deck',
-			'Saloon',
-			'VERA at anchor',
-			'Master cabin',
-			'Guest cabin',
-			'Galley',
-			'Helm station'
-		],
-		layoutAlt: 'Deck plan of the Dufour 460 GL VERA'
+		photoAlts: {
+			sailing: 'VERA under sail',
+			cockpit: 'Cockpit and sun deck',
+			deck: 'Deck',
+			saloon: 'Saloon',
+			'at-anchor': 'VERA at anchor',
+			'master-cabin': 'Master cabin',
+			'guest-cabin': 'Guest cabin',
+			galley: 'Galley',
+			helm: 'Helm station',
+			'deck-plan': 'Deck plan of the Dufour 460 GL VERA'
+		}
 	},
 
 	es: {
@@ -582,17 +583,17 @@ export const dict = {
 			ctaText: 'Cuéntanos cuándo quieres zarpar y cuántos sois.'
 		},
 
-		photoAlts: [
-			'VERA navegando',
-			'Bañera y solárium',
-			'Cubierta',
-			'Salón',
-			'VERA fondeado',
-			'Camarote armador',
-			'Camarote de invitados',
-			'Cocina',
-			'Puesto de gobierno'
-		],
-		layoutAlt: 'Plano del Dufour 460 GL VERA'
+		photoAlts: {
+			sailing: 'VERA navegando',
+			cockpit: 'Bañera y solárium',
+			deck: 'Cubierta',
+			saloon: 'Salón',
+			'at-anchor': 'VERA fondeado',
+			'master-cabin': 'Camarote armador',
+			'guest-cabin': 'Camarote de invitados',
+			galley: 'Cocina',
+			helm: 'Puesto de gobierno',
+			'deck-plan': 'Plano del Dufour 460 GL VERA'
+		}
 	}
 };
