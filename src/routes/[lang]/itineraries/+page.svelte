@@ -23,13 +23,7 @@
 				<p class="mb-6 text-body text-on-surface-variant">{p}</p>
 			{/each}
 		</div>
-		<!-- ponytail: placeholder, sostituire con <img src="/img/itineraries/view-formentera.jpg" alt={it.imgAlt} /> quando la foto c'è -->
-		<div
-			class="flex aspect-4/3 flex-col items-center justify-center gap-3 rounded border border-dashed border-outline-variant/50 bg-surface-container-lowest text-on-surface-variant/60"
-		>
-			<span class="material-symbols-outlined text-4xl">image</span>
-			<span class="text-caps uppercase">{it.imgAlt}</span>
-		</div>
+		<img src="/img/itineraries/view-formentera.jpg" alt={it.imgAlt} />
 	</section>
 
 	<section class="mb-20 grid grid-cols-1 items-start gap-12 md:grid-cols-2">
