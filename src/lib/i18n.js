@@ -278,11 +278,8 @@ export const dict = {
 			'guest-cabin': 'Cabina ospiti',
 			galley: 'Cucina',
 			helm: 'Timoneria',
-<<<<<<< HEAD
-=======
 			us: 'L’equipaggio di McFirst Charter',
 			skipper: 'Lo skipper di VERA',
->>>>>>> about
 			'deck-plan': 'Planimetria della Dufour 460 GL VERA'
 		}
 	},
@@ -548,11 +545,8 @@ export const dict = {
 			'guest-cabin': 'Guest cabin',
 			galley: 'Galley',
 			helm: 'Helm station',
-<<<<<<< HEAD
-=======
 			us: 'The McFirst Charter crew',
 			skipper: 'VERA’s skipper',
->>>>>>> about
 			'deck-plan': 'Deck plan of the Dufour 460 GL VERA'
 		}
 	},
@@ -819,11 +813,8 @@ export const dict = {
 			'guest-cabin': 'Camarote de invitados',
 			galley: 'Cocina',
 			helm: 'Puesto de gobierno',
-<<<<<<< HEAD
-=======
 			us: 'La tripulación de McFirst Charter',
 			skipper: 'El patrón de VERA',
->>>>>>> about
 			'deck-plan': 'Plano del Dufour 460 GL VERA'
 		}
 	}
