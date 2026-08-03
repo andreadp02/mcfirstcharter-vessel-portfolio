@@ -21,6 +21,7 @@ export const dict = {
 		nav: [
 			{ href: '/boat', label: 'La Barca' },
 			{ href: '/itineraries', label: 'Itinerari' },
+			{ href: '/harbour', label: 'Il Porto' },
 			{ href: '/about', label: 'Chi Siamo' }
 		],
 		mailSubject: 'Richiesta disponibilità VERA',
@@ -87,7 +88,7 @@ export const dict = {
 				{ label: 'Consumo carburante', value: '6 L/h' },
 				{ label: 'Velocità di crociera', value: '8 kn' },
 				{ label: 'Motore', value: '75 cv' },
-				{ label: 'Porto base', value: 'da confermare', todo: true }
+				{ label: 'Porto base', value: 'Marina Alicante' }
 			],
 			aboardTitle: 'A bordo di VERA',
 			p1: 'Questa barca a vela di 14 metri offre ampi spazi interni ed esterni, cabine confortevoli, grande pozzetto prendisole e ottime prestazioni sia a vela che a motore. La disposizione intelligente degli ambienti garantisce privacy e vivibilità anche per gruppi numerosi.',
@@ -178,8 +179,47 @@ export const dict = {
 			note: 'Le rotte vengono definite insieme prima della partenza, tenendo conto delle condizioni meteo.'
 		},
 
+		harbour: {
+			metaDesc:
+				'Dove si imbarca su VERA: Marina Alicante, come arrivare e le regole del noleggio — settimana da sabato a sabato, cauzione ed extra.',
+			title: 'Il Porto',
+			lead: 'VERA parte da Alicante. Da qui si raggiungono Ibiza e Formentera: qui trovi dove ci si imbarca, come arrivare e le condizioni del noleggio.',
+			addressLabel: 'Indirizzo',
+			mapTitle: 'Dove trovi la barca',
+			openInMaps: 'Apri in Google Maps',
+			gettingThere: {
+				title: 'Come arrivare',
+				p1: 'L’aeroporto di Alicante-Elche (ALC) è a una ventina di minuti di auto dalla marina, con collegamenti diretti dalle principali città europee. In alternativa la stazione di Alicante Terminal è servita dai treni ad alta velocità.',
+				p2: 'La marina è in centro città, con parcheggio nelle vicinanze e negozi per la spesa a pochi minuti a piedi. Il pontile e il posto barca esatti vengono comunicati alla conferma della prenotazione.'
+			},
+			rulesTitle: 'Come funziona il noleggio',
+			rules: [
+				{ label: 'Formula', value: 'Settimana da sabato a sabato' },
+				{ label: 'Check-in', value: 'Sabato dalle 17:00' },
+				{ label: 'Check-out', value: 'Sabato entro le 10:00' },
+				{ label: 'Cauzione', key: 'deposit' },
+				{
+					label: 'Senza skipper',
+					value: 'Patente nautica e certificato VHF del comandante'
+				},
+				{ label: 'Con skipper', value: 'Disponibile su richiesta, vedi extra' }
+			],
+			extrasTitle: 'Extra e servizi',
+			extrasNote:
+				'Prezzi per noleggio, da saldare alla consegna. La pulizia finale è obbligatoria, il resto è a scelta.',
+			requiredLabel: 'obbligatoria',
+			extras: [
+				{ key: 'cleaning', label: 'Pulizia finale', required: true },
+				{ key: 'skipper', label: 'Skipper' },
+				{ key: 'earlyCheckin', label: 'Check-in anticipato' },
+				{ key: 'tenderEngine', label: 'Motore del tender' }
+			],
+			note: 'Carburante, ormeggi fuori base e spesa di bordo restano a carico dell’equipaggio. Per qualsiasi dubbio sulle condizioni, scrivici prima di prenotare.'
+		},
+
 		about: {
 			metaDesc: 'McFirst Charter: chi siamo e come lavoriamo a bordo di VERA, Dufour 460 GL.',
+			title: 'Chi Siamo',
 			heroTitle: 'Il mare, condiviso.',
 			storyTitle: 'La nostra storia',
 			// TODO: riscrivere con la storia reale di McFirst Charter
@@ -231,6 +271,7 @@ export const dict = {
 		nav: [
 			{ href: '/boat', label: 'The Boat' },
 			{ href: '/itineraries', label: 'Itineraries' },
+			{ href: '/harbour', label: 'The Harbour' },
 			{ href: '/about', label: 'About Us' }
 		],
 		mailSubject: 'VERA availability request',
@@ -295,7 +336,7 @@ export const dict = {
 				{ label: 'Fuel consumption', value: '6 L/h' },
 				{ label: 'Cruising speed', value: '8 kn' },
 				{ label: 'Engine', value: '75 hp' },
-				{ label: 'Home port', value: 'to be confirmed', todo: true }
+				{ label: 'Home port', value: 'Marina Alicante' }
 			],
 			aboardTitle: 'On board VERA',
 			p1: 'This 14-metre sailing yacht offers generous space inside and out, comfortable cabins, a large sun-deck cockpit and excellent performance under both sail and engine. The clever layout keeps privacy and liveability even with large groups on board.',
@@ -385,8 +426,47 @@ export const dict = {
 			note: 'Routes are agreed together before departure, taking the weather into account.'
 		},
 
+		harbour: {
+			metaDesc:
+				'Where you board VERA: Marina Alicante, how to get there and the charter terms — Saturday-to-Saturday weeks, deposit and extras.',
+			title: 'The Harbour',
+			lead: 'VERA sails from Alicante, the gateway to Ibiza and Formentera. Here is where you board, how to get there and how the charter works.',
+			addressLabel: 'Address',
+			mapTitle: 'Where to find the boat',
+			openInMaps: 'Open in Google Maps',
+			gettingThere: {
+				title: 'Getting there',
+				p1: 'Alicante-Elche airport (ALC) is about twenty minutes by car from the marina, with direct flights from most European cities. Alicante Terminal station is also served by high-speed trains.',
+				p2: 'The marina sits in the city centre, with parking nearby and shops for provisioning a few minutes away on foot. The exact pontoon and berth are confirmed when the booking is.'
+			},
+			rulesTitle: 'How the charter works',
+			rules: [
+				{ label: 'Format', value: 'Weekly, Saturday to Saturday' },
+				{ label: 'Check-in', value: 'Saturday from 17:00' },
+				{ label: 'Check-out', value: 'Saturday by 10:00' },
+				{ label: 'Security deposit', key: 'deposit' },
+				{
+					label: 'Bareboat',
+					value: 'Skipper’s sailing licence and VHF certificate'
+				},
+				{ label: 'With skipper', value: 'Available on request, see extras' }
+			],
+			extrasTitle: 'Extras and services',
+			extrasNote:
+				'Prices per charter, payable at handover. Final cleaning is mandatory, everything else is optional.',
+			requiredLabel: 'mandatory',
+			extras: [
+				{ key: 'cleaning', label: 'Final cleaning', required: true },
+				{ key: 'skipper', label: 'Skipper' },
+				{ key: 'earlyCheckin', label: 'Early check-in' },
+				{ key: 'tenderEngine', label: 'Tender outboard engine' }
+			],
+			note: 'Fuel, mooring fees away from the home port and provisioning are down to the crew. If anything about the terms is unclear, write to us before booking.'
+		},
+
 		about: {
 			metaDesc: 'McFirst Charter: who we are and how we work aboard VERA, Dufour 460 GL.',
+			title: 'About Us',
 			heroTitle: 'The sea, shared.',
 			storyTitle: 'Our story',
 			p1: 'McFirst Charter was born from a passion for the sea and the wish to share it. VERA, our Dufour 460 Grand Large, is set up to let families and groups of friends enjoy the sea in total comfort.',
@@ -436,6 +516,7 @@ export const dict = {
 		nav: [
 			{ href: '/boat', label: 'El Barco' },
 			{ href: '/itineraries', label: 'Itinerarios' },
+			{ href: '/harbour', label: 'El Puerto' },
 			{ href: '/about', label: 'Quiénes Somos' }
 		],
 		mailSubject: 'Consulta de disponibilidad VERA',
@@ -501,7 +582,7 @@ export const dict = {
 				{ label: 'Consumo de combustible', value: '6 L/h' },
 				{ label: 'Velocidad de crucero', value: '8 kn' },
 				{ label: 'Motor', value: '75 CV' },
-				{ label: 'Puerto base', value: 'por confirmar', todo: true }
+				{ label: 'Puerto base', value: 'Marina Alicante' }
 			],
 			aboardTitle: 'A bordo de VERA',
 			p1: 'Este velero de 14 metros ofrece amplios espacios interiores y exteriores, camarotes confortables, gran bañera solárium y excelentes prestaciones tanto a vela como a motor. La distribución inteligente garantiza privacidad y habitabilidad incluso con grupos numerosos.',
@@ -591,8 +672,47 @@ export const dict = {
 			note: 'Las rutas se definen juntos antes de zarpar, teniendo en cuenta las condiciones meteorológicas.'
 		},
 
+		harbour: {
+			metaDesc:
+				'Dónde se embarca en VERA: Marina Alicante, cómo llegar y las condiciones del alquiler — semana de sábado a sábado, fianza y extras.',
+			title: 'El Puerto',
+			lead: 'VERA sale de Alicante, la puerta de entrada a Ibiza y Formentera. Aquí encontrarás dónde se embarca, cómo llegar y cómo funciona el alquiler.',
+			addressLabel: 'Dirección',
+			mapTitle: 'Dónde está el barco',
+			openInMaps: 'Abrir en Google Maps',
+			gettingThere: {
+				title: 'Cómo llegar',
+				p1: 'El aeropuerto de Alicante-Elche (ALC) está a unos veinte minutos en coche de la marina, con vuelos directos desde las principales ciudades europeas. La estación de Alicante Terminal también tiene trenes de alta velocidad.',
+				p2: 'La marina está en el centro de la ciudad, con aparcamiento cerca y tiendas para hacer la compra a pocos minutos a pie. El pantalán y el amarre exactos se comunican al confirmar la reserva.'
+			},
+			rulesTitle: 'Cómo funciona el alquiler',
+			rules: [
+				{ label: 'Formato', value: 'Semana de sábado a sábado' },
+				{ label: 'Check-in', value: 'Sábado a partir de las 17:00' },
+				{ label: 'Check-out', value: 'Sábado antes de las 10:00' },
+				{ label: 'Fianza', key: 'deposit' },
+				{
+					label: 'Sin patrón',
+					value: 'Titulación náutica y certificado VHF del patrón'
+				},
+				{ label: 'Con patrón', value: 'Disponible bajo petición, ver extras' }
+			],
+			extrasTitle: 'Extras y servicios',
+			extrasNote:
+				'Precios por alquiler, a pagar en la entrega. La limpieza final es obligatoria, el resto es opcional.',
+			requiredLabel: 'obligatoria',
+			extras: [
+				{ key: 'cleaning', label: 'Limpieza final', required: true },
+				{ key: 'skipper', label: 'Patrón' },
+				{ key: 'earlyCheckin', label: 'Check-in anticipado' },
+				{ key: 'tenderEngine', label: 'Motor del auxiliar' }
+			],
+			note: 'El combustible, los amarres fuera de la base y la compra de a bordo corren a cargo de la tripulación. Si tienes dudas sobre las condiciones, escríbenos antes de reservar.'
+		},
+
 		about: {
 			metaDesc: 'McFirst Charter: quiénes somos y cómo trabajamos a bordo de VERA, Dufour 460 GL.',
+			title: 'Quiénes Somos',
 			heroTitle: 'El mar, compartido.',
 			storyTitle: 'Nuestra historia',
 			p1: 'McFirst Charter nace de la pasión por el mar y del deseo de compartirla. VERA, nuestro Dufour 460 Grand Large, está pensado para que familias y grupos de amigos vivan el mar con total confort.',

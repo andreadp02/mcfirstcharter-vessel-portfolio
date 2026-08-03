@@ -11,6 +11,25 @@ export const boat = {
 	model: 'Dufour 460 Grand Large'
 };
 
+// Base di partenza. Può cambiare: si modifica qui e seguono la pagina Il Porto,
+// la mappa e la scheda tecnica della barca.
+export const harbour = {
+	marina: 'Marina Alicante',
+	address: 'Muelle de Levante, 03001 Alicante, España',
+	mapsQuery: 'Marina Alicante, Muelle de Levante, Alicante'
+};
+
+// Importi in euro. Le etichette stanno in i18n.js (`harbour.rules` / `harbour.extras`),
+// riferite per chiave: il prezzo non va duplicato nelle tre lingue.
+/** @type {Record<string, number>} */
+export const charter = {
+	deposit: 2000,
+	cleaning: 150,
+	skipper: 250,
+	earlyCheckin: 250,
+	tenderEngine: 100
+};
+
 // Una cartella per pagina: static/img/<pagina>/<soggetto>.jpg — vedi static/img/README.md.
 // L'alt viene dal nome del file (il soggetto): i18n.js, `photoAlts`. Lo stesso soggetto
 // usato su più pagine sta in entrambe le cartelle e condivide l'alt.

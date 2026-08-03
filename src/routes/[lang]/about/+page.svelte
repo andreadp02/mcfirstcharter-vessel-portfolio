@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{t.nav[2].label} | {site.name}</title>
+	<title>{a.title} | {site.name}</title>
 	<meta name="description" content={a.metaDesc} />
 </svelte:head>
 
