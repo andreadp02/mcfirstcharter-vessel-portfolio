@@ -66,7 +66,7 @@
 		class="mx-auto mb-30 grid max-w-site grid-cols-1 items-start gap-6 px-5 md:grid-cols-12 md:px-16"
 	>
 		<div
-			class="order-2 mt-12 h-fit rounded border border-outline-variant/30 bg-surface-container-lowest p-8 md:sticky md:top-28 md:order-1 md:col-span-5 md:mt-0"
+			class="order-2 mt-12 h-fit rounded border border-outline-variant/30 bg-surface-container-lowest p-8 md:order-1 md:col-span-5 md:mt-0"
 		>
 			<h2
 				class="tick mb-8 flex items-center gap-2 border-b border-tertiary-fixed-dim pb-4 font-display text-headline-sm text-primary"
@@ -107,16 +107,21 @@
 		<div class="order-2 mt-12 md:order-1 md:col-span-5 md:mt-0">
 			<div class="rounded border border-outline-variant/30 bg-surface-bright p-8">
 				<h2 class="tick mb-6 font-display text-headline-sm text-primary">{b.equipmentTitle}</h2>
-				<ul
-					class="grid grid-cols-1 gap-4 text-body text-on-surface-variant sm:grid-cols-2 md:grid-cols-1"
-				>
-					{#each b.equipment as item (item)}
-						<li class="tick flex items-center gap-3">
-							<span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check</span>
-							{item}
-						</li>
+				<div class="space-y-6">
+					{#each b.equipment as category (category.title)}
+						<div class="tick">
+							<h3 class="mb-3 text-caps text-primary-container/60 uppercase">{category.title}</h3>
+							<ul class="grid grid-cols-1 gap-3 text-body text-on-surface-variant sm:grid-cols-2 md:grid-cols-1">
+								{#each category.items as item (item)}
+									<li class="flex items-center gap-3">
+										<span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check</span>
+										{item}
+									</li>
+								{/each}
+							</ul>
+						</div>
 					{/each}
-				</ul>
+				</div>
 			</div>
 		</div>
 		<div

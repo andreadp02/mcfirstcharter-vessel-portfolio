@@ -94,16 +94,39 @@ export const dict = {
 			p2: 'Ideale per crociere settimanali e vacanze relax tra baie e isole.',
 			equipmentTitle: 'Dotazioni e Planimetria',
 			equipment: [
-				'4 cabine',
-				'4 bagni',
-				'Cucina completa',
-				'Frigorifero',
-				'Docce interne ed esterne',
-				'GPS cartografico',
-				'Autopilota',
-				'Bimini',
-				'Ampio prendisole',
-				'Elica di prua'
+				{ title: 'Caratteristiche esterne', items: [
+					'Bimini',
+					'Tavolo da pranzo',
+					'Impianto stereo',
+					'Cuscini per il pozzetto',
+					'Ponte in teak',
+					'Plancetta di poppa',
+					'Scaletta da bagno'
+				] },
+				{ title: 'Comfort a bordo', items: [
+					'Acqua calda',
+					'Lenzuola',
+					'Asciugamani',
+					'Presa USB'
+				] },
+				{ title: 'Apparecchiature di navigazione', items: [
+					'Tender',
+					'Motore per tender',
+					'Elica di manovra',
+					'Salpa ancora elettrico',
+					'Pilota automatico',
+					'GPS',
+					'Ecoscandaglio',
+					'Carte nautiche'
+				] },
+				{ title: 'Cucina', items: [
+					'Frigorifero',
+					'Forno/fornelli'
+				] },
+				{ title: 'Vele & attrezzature', items: [
+					'Randa avvolgibile',
+					'Genoa avvolgibile'
+				] }
 			],
 			galleryOverline: 'Galleria',
 			galleryTitle: 'Interni ed esterni',
@@ -266,16 +289,39 @@ export const dict = {
 			p2: 'Ideal for weekly cruises, weekends and relaxing holidays among bays and islands.',
 			equipmentTitle: 'Equipment and boat layout',
 			equipment: [
-				'4 cabins',
-				'4 heads',
-				'Full galley',
-				'Refrigerator',
-				'Indoor and outdoor showers',
-				'Chart plotter GPS',
-				'Autopilot',
-				'Bimini',
-				'Large sun deck',
-				'Bow thruster'
+				{ title: 'Exterior features', items: [
+					'Bimini',
+					'Dining table',
+					'Stereo system',
+					'Cockpit cushions',
+					'Teak deck',
+					'Swim platform',
+					'Swimming ladder'
+				] },
+				{ title: 'On-board comfort', items: [
+					'Hot water',
+					'Bed linens',
+					'Towels',
+					'USB socket'
+				] },
+				{ title: 'Navigation equipment', items: [
+					'Tender',
+					'Outboard engine',
+					'Bow thruster',
+					'Electric windlass',
+					'Autopilot',
+					'GPS',
+					'Depth sounder',
+					'Nautical charts'
+				] },
+				{ title: 'Galley', items: [
+					'Refrigerator',
+					'Oven/stove'
+				] },
+				{ title: 'Sails & rigging', items: [
+					'Furling mainsail',
+					'Furling genoa'
+				] }
 			],
 			galleryOverline: 'Gallery',
 			galleryTitle: 'Inside and out',
@@ -437,16 +483,39 @@ export const dict = {
 			p2: 'Ideal para cruceros semanales, fines de semana y vacaciones relax entre calas e islas.',
 			equipmentTitle: 'Equipamiento y plano de distribución',
 			equipment: [
-				'4 camarotes',
-				'4 baños',
-				'Cocina completa',
-				'Frigorífico',
-				'Duchas interiores y exteriores',
-				'GPS cartográfico',
-				'Piloto automático',
-				'Bimini',
-				'Amplio solárium',
-				'Hélice de proa'
+				{ title: 'Características exteriores', items: [
+					'Bimini',
+					'Mesa de comedor',
+					'Equipo de música',
+					'Cojines para bañera',
+					'Cubierta de teka',
+					'Plataforma de baño',
+					'Escalera de baño'
+				] },
+				{ title: 'Confort a bordo', items: [
+					'Agua caliente',
+					'Sábanas',
+					'Toallas',
+					'Toma USB'
+				] },
+				{ title: 'Equipamiento de navegación', items: [
+					'Tender',
+					'Motor para tender',
+					'Hélice de proa',
+					'Molinete eléctrico',
+					'Piloto automático',
+					'GPS',
+					'Ecosonda',
+					'Cartas náuticas'
+				] },
+				{ title: 'Cocina', items: [
+					'Refrigerador',
+					'Horno/placas'
+				] },
+				{ title: 'Velas y aparejos', items: [
+					'Mayor enrollable',
+					'Génova enrollable'
+				] }
 			],
 			galleryOverline: 'Galería',
 			galleryTitle: 'Interiores y exteriores',
