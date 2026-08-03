@@ -1,23 +1,35 @@
 # Immagini
 
-Metti qui i file con **questi nomi esatti** (jpg). Finché mancano, sul sito compare
-un riquadro grigio con scritto il nome del file atteso.
+Una cartella per pagina, il nome del file è il soggetto. Finché il file manca, sul
+sito compare un riquadro grigio con scritto il nome atteso.
 
-| File | Dove appare | Soggetto consigliato |
+| File | Dove appare | Soggetto |
 |---|---|---|
-| `photo-01.jpg` | home (sfondo hero), boat (foto grande in alto) | VERA in navigazione, orizzontale |
-| `photo-02.jpg` | home (intro), boat (accanto al racconto) | pozzetto / prendisole |
-| `photo-03.jpg` | home, about (hero), boat (accanto alla scheda tecnica) | coperta / dettaglio esterno |
-| `photo-04.jpg` | boat (galleria) | quadrato interno |
-| `photo-05.jpg` | home, boat (fascia a tutta larghezza) | VERA all'ancora o vista sul mare, molto orizzontale |
-| `photo-06.jpg` | about (tondo), boat (galleria) | cabina armatoriale |
-| `photo-07.jpg` | boat (galleria) | cabina ospiti / bagno |
-| `photo-08.jpg` | boat (galleria) | cucina |
-| `photo-09.jpg` | boat (galleria) | timoneria |
-| `deck-plan.jpg` | boat (accanto alle dotazioni) | planimetria/layout della Dufour 460 GL |
+| `home/sailing.jpg` | home — sfondo hero | VERA in navigazione, orizzontale |
+| `home/cockpit.jpg` | home — intro | pozzetto / prendisole |
+| `home/master-cabin.jpg` | home — anteprima galleria | cabina armatoriale |
+| `home/guest-cabin.jpg` | home — anteprima galleria | cabina ospiti / bagno |
+| `home/galley.jpg` | home — anteprima galleria | cucina |
+| `about/deck.jpg` | about — hero | coperta / dettaglio esterno |
+| `about/master-cabin.jpg` | about — tondo | cabina armatoriale |
+| `boat/sailing.jpg` | boat — foto grande in alto | VERA in navigazione, orizzontale |
+| `boat/cockpit.jpg` | boat — accanto al racconto | pozzetto / prendisole |
+| `boat/deck.jpg` | boat — accanto alla scheda tecnica | coperta / dettaglio esterno |
+| `boat/deck-plan.jpg` | boat — accanto alle dotazioni | planimetria della Dufour 460 GL |
+| `boat/at-anchor.jpg` | boat — fascia a tutta larghezza | VERA all'ancora, molto orizzontale |
+| `boat/saloon.jpg` | boat — galleria | quadrato interno |
+| `boat/master-cabin.jpg` | boat — galleria | cabina armatoriale |
+| `boat/guest-cabin.jpg` | boat — galleria | cabina ospiti / bagno |
+| `boat/galley.jpg` | boat — galleria | cucina |
+| `boat/helm.jpg` | boat — galleria | timoneria |
 
-Se cambi i soggetti, aggiorna anche gli `alt` in `src/lib/i18n.js` (`photoAlts`, uno
-per lingua, stesso ordine dei file).
+Lo stesso soggetto su più pagine è un file per cartella (copie): così ogni pagina
+si può cambiare da sola.
 
-`photo-01`, `photo-03` e `photo-05` vengono ritagliate a tutta larghezza: usa
-immagini orizzontali larghe almeno 1920px. Le altre almeno 1200px.
+Le pagine e i file sono elencati in `src/lib/site.js` (`photos`). Gli `alt` stanno
+in `src/lib/i18n.js` (`photoAlts`), uno per lingua, **con chiave = nome del file**
+senza estensione: `boat/master-cabin.jpg` → `'master-cabin'`. Aggiungendo un
+soggetto nuovo, aggiungi la chiave in tutte e tre le lingue.
+
+`sailing`, `deck` e `at-anchor` vengono ritagliate a tutta larghezza: usa immagini
+orizzontali larghe almeno 1920px. Le altre almeno 1200px.

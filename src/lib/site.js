@@ -8,21 +8,53 @@ export const site = {
 
 export const boat = {
 	name: 'VERA',
-	model: 'Dufour 460 Grand Large',
+	model: 'Dufour 460 Grand Large'
+};
 
-	// I file vanno in static/img/ — vedi static/img/README.md
-	// Le descrizioni (alt) sono in i18n.js: `photoAlts`, stesso ordine.
-	photos: [
-		'/img/photo-01.jpg',
-		'/img/photo-02.jpg',
-		'/img/photo-03.jpg',
-		'/img/photo-04.jpg',
-		'/img/photo-05.jpg',
-		'/img/photo-06.jpg',
-		'/img/photo-07.jpg',
-		'/img/photo-08.jpg',
-		'/img/photo-09.jpg'
-	],
+// Base di partenza. Può cambiare: si modifica qui e seguono la pagina Il Porto,
+// la mappa e la scheda tecnica della barca.
+export const harbour = {
+	marina: 'Marina Alicante',
+	address: 'Muelle de Levante, 03001 Alicante, España',
+	mapsQuery: 'Marina Alicante, Muelle de Levante, Alicante'
+};
 
-	layout: '/img/deck-plan.jpg'
+// Importi in euro. Le etichette stanno in i18n.js (`harbour.rules` / `harbour.extras`),
+// riferite per chiave: il prezzo non va duplicato nelle tre lingue.
+/** @type {Record<string, number>} */
+export const charter = {
+	deposit: 2000,
+	cleaning: 150,
+	skipper: 250,
+	earlyCheckin: 250,
+	tenderEngine: 100
+};
+
+// Una cartella per pagina: static/img/<pagina>/<soggetto>.jpg — vedi static/img/README.md.
+// L'alt viene dal nome del file (il soggetto): i18n.js, `photoAlts`. Lo stesso soggetto
+// usato su più pagine sta in entrambe le cartelle e condivide l'alt.
+export const photos = {
+	home: {
+		hero: '/img/home/sailing.jpg',
+		intro: '/img/home/cockpit.jpg',
+		gallery: ['/img/home/master-cabin.jpg', '/img/home/guest-cabin.jpg', '/img/home/galley.jpg']
+	},
+	about: {
+		hero: '/img/about/deck.jpg',
+		portrait: '/img/about/master-cabin.jpg'
+	},
+	boat: {
+		hero: '/img/boat/sailing.jpg',
+		aboard: '/img/boat/cockpit.jpg',
+		specs: '/img/boat/deck.jpg',
+		deckPlan: '/img/boat/deck-plan.jpg',
+		banner: '/img/boat/at-anchor.jpg',
+		gallery: [
+			'/img/boat/saloon.jpg',
+			'/img/boat/master-cabin.jpg',
+			'/img/boat/guest-cabin.jpg',
+			'/img/boat/galley.jpg',
+			'/img/boat/bathroom.jpg'
+		]
+	}
 };

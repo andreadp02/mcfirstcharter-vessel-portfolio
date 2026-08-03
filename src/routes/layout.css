@@ -64,27 +64,70 @@ html {
 	user-select: none;
 }
 
-/* Comparsa allo scorrimento del mockup "immersive reveal" (vedi src/lib/reveal.js:
-   .reveal la mette il JS, quindi senza JS le sezioni restano visibili). */
-@keyframes reveal-up {
-	from {
-		opacity: 0;
-		translate: 0 40px;
+/* Comparsa allo scorrimento (vedi src/lib/reveal.js: .reveal la mette il JS,
+   quindi senza JS le sezioni restano visibili; .reveal-in arriva dall'observer).
+   Tre gesti distinti, non la stessa entrata su ogni cosa:
+     .hatch-text  i titoli si scoprono come un boccaporto che si apre
+     .settle      i blocchi di testo si assestano dal basso
+     .tick        le righe di elenco entrano sfalsate dalla loro posizione   */
+@media (prefers-reduced-motion: no-preference) {
+	.reveal :is(.hatch-text, .settle, .tick) {
+		transition-duration: 0.7s;
+		transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 	}
-	to {
+
+	/* la feritoia si apre verso il basso. Gli inset negativi lasciano aria a
+	   discendenti, ombre e bordi, che altrimenti il ritaglio taglierebbe. */
+	.reveal .hatch-text {
+		clip-path: inset(-40% 0 100% 0);
+		translate: 0 14px;
+		transition-property: clip-path, translate;
+		transition-duration: 0.9s;
+	}
+
+	.reveal .settle {
+		opacity: 0;
+		translate: 0 28px;
+		transition-property: opacity, translate;
+		transition-delay: 0.09s;
+	}
+
+	.reveal .tick {
+		opacity: 0;
+		translate: 0 18px;
+		transition-property: opacity, translate;
+		transition-duration: 0.55s;
+	}
+
+	/* lo sfalsamento si ferma alla settima riga: oltre, l'ultima aspetterebbe
+	   più di quanto duri l'entrata */
+	.reveal .tick:nth-child(2) {
+		transition-delay: 0.06s;
+	}
+	.reveal .tick:nth-child(3) {
+		transition-delay: 0.12s;
+	}
+	.reveal .tick:nth-child(4) {
+		transition-delay: 0.18s;
+	}
+	.reveal .tick:nth-child(5) {
+		transition-delay: 0.24s;
+	}
+	.reveal .tick:nth-child(6) {
+		transition-delay: 0.3s;
+	}
+	.reveal .tick:nth-child(n + 7) {
+		transition-delay: 0.36s;
+	}
+
+	.reveal-in .hatch-text {
+		clip-path: inset(-40% 0 -20% 0);
+		translate: 0 0;
+	}
+	.reveal-in :is(.settle, .tick) {
 		opacity: 1;
 		translate: 0 0;
 	}
-}
-
-/* il ritardo è la rete di sicurezza: se l'observer non scatta (tab in secondo
-   piano, browser strani) la sezione compare comunque da sola dopo 3s */
-.reveal {
-	animation: reveal-up 0.8s ease-out 3s both;
-}
-
-.reveal-in {
-	animation-delay: 0s;
 }
 
 /* ---------------------------------------------------------------------------
@@ -135,17 +178,38 @@ html {
 
 @supports (animation-timeline: view()) {
 	@media (prefers-reduced-motion: no-preference) {
-		/* la durata la detta lo scorrimento, non un timer: `auto` + view() */
+		/* la durata la detta lo scorrimento, non un timer: `auto` + view().
+		   Qui restano solo le cose in cui la posizione di scorrimento è il
+		   contenuto: la foto che risale e il titolo che sprofonda uscendo.
+		   Il testo lo muove l'observer (vedi sopra). */
 		.drift > img,
 		.drift-deep > img,
 		.open-frame,
-		.settle,
-		.tick,
 		.hero-lede {
-			animation-timeline: view();
 			animation-duration: auto;
 			animation-timing-function: linear;
 			animation-fill-mode: both;
+		}
+
+		.open-frame,
+		.hero-lede {
+			animation-timeline: view();
+		}
+
+		/* il ritaglio della foto è esso stesso uno scroll container (overflow
+		   hidden): `view()` sull'img si aggancerebbe lì dentro e resterebbe
+		   fermo. La cornice pubblica quindi la propria timeline e l'img la usa. */
+		.drift {
+			view-timeline-name: --drift;
+		}
+		.drift-deep {
+			view-timeline-name: --drift-deep;
+		}
+		.drift > img {
+			animation-timeline: --drift;
+		}
+		.drift-deep > img {
+			animation-timeline: --drift-deep;
 		}
 
 		/* La foto scorre dentro il ritaglio: l'immagine eccede in altezza e la
@@ -269,8 +333,9 @@ html {
 	animation: gradient-shift 15s ease infinite;
 }
 
+/* con animazioni ridotte reveal.js non aggiunge nemmeno .reveal: qui resta solo
+   lo sfondo, che si anima da sé */
 @media (prefers-reduced-motion: reduce) {
-	.reveal,
 	.gradient-sea {
 		animation: none;
 	}

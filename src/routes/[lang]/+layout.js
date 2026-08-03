@@ -1,6 +1,21 @@
 import { error } from '@sveltejs/kit';
 import { dict } from '$lib/i18n';
-import { boat } from '$lib/site';
+import { photos } from '$lib/site';
+
+// '/img/boat/master-cabin.jpg' -> 'master-cabin', la chiave in `photoAlts`.
+/** @param {string} src */
+const subject = (src) => src.split('/').pop()?.replace(/\.\w+$/, '') ?? '';
+
+/**
+ * @param {any} node
+ * @param {Record<string, string>} alts
+ * @returns {any} stessa forma di `photos`, con { src, alt } al posto dei percorsi
+ */
+function withAlts(node, alts) {
+	if (typeof node === 'string') return { src: node, alt: alts[subject(node)] ?? '' };
+	if (Array.isArray(node)) return node.map((n) => withAlts(n, alts));
+	return Object.fromEntries(Object.entries(node).map(([k, v]) => [k, withAlts(v, alts)]));
+}
 
 export function load({ params }) {
 	const t = dict[params.lang];
@@ -9,8 +24,6 @@ export function load({ params }) {
 	return {
 		lang: params.lang,
 		t,
-		// alt tradotti accoppiati ai file in ordine
-		photos: boat.photos.map((src, i) => ({ src, alt: t.photoAlts[i] })),
-		layout: { src: boat.layout, alt: t.layoutAlt }
+		photos: withAlts(photos, t.photoAlts)
 	};
 }
