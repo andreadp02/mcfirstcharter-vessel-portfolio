@@ -41,7 +41,8 @@ export const photos = {
 	},
 	about: {
 		hero: '/img/about/deck.jpg',
-		portrait: '/img/about/master-cabin.jpg'
+		portrait: '/img/about/us.jpg',
+		skipper: '/img/about/skipper.jpg'
 	},
 	boat: {
 		hero: '/img/boat/sailing.jpg',
