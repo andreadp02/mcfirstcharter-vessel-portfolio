@@ -1,72 +1,63 @@
 # McFirst Charter
 
-Sito di **VERA**, Dufour 460 GL. SvelteKit + Tailwind v4, tutto prerenderizzato,
-deploy su Cloudflare Pages con `@sveltejs/adapter-cloudflare`.
+Website for **VERA**, a Dufour 460 GL. SvelteKit + Tailwind v4, fully prerendered,
+deployed to Cloudflare Pages with `@sveltejs/adapter-cloudflare`.
 
 ```
 src/
-  app.html                  <html lang="%lang%">, font (Inter + Playfair + Material Symbols)
-  hooks.server.js           riempie %lang% con la lingua della pagina
-  lib/i18n.js               TUTTI i testi, uno per lingua (it/en/es)
-  lib/site.js               dati non traducibili: contatti, nome barca, elenco foto
-  lib/Img.svelte            <img> con segnaposto se il file manca
+  app.html                  <html lang="%lang%">, fonts (Inter + Playfair + Material Symbols)
+  hooks.server.js           fills %lang% with the page's language
+  lib/i18n.js               ALL text, one entry per language (it/en/es)
+  lib/site.js               non-translatable data: contacts, boat name, photo list
+  lib/Img.svelte            <img> with a placeholder if the file is missing
   routes/
-    +layout.js/.svelte      prerender = true, CSS e favicon
+    +layout.js/.svelte      prerender = true, CSS and favicon
     +page.js                "/" -> "/it"
-    layout.css              @theme Tailwind = palette "Maritime Elegance"
+    layout.css              @theme Tailwind = "Maritime Elegance" palette
     [lang]/
-      +layout.js            carica il dizionario della lingua (404 se sconosciuta)
-      +layout.svelte        nav (voce attiva + IT/EN/ES) + footer
-      +page.js              elenco lingue da prerenderizzare
-      +page.svelte          home + sezione #contact
-      boat/+page.svelte     galleria, scheda tecnica, dotazioni, planimetria
+      +layout.js            loads the language dictionary (404 if unknown)
+      +layout.svelte        nav (active item + IT/EN/ES) + footer
+      +page.js               list of languages to prerender
+      +page.svelte           home + #contact section
+      boat/+page.svelte      gallery, specs, equipment, floor plan
       itineraries/+page.svelte
       about/+page.svelte
-static/img/                 photo-01..09.jpg + deck-plan.jpg (vedi README.md)
-stitch_blue_horizon_charter/  mockup originali Google Stitch (non pubblicati)
+static/img/                 photo-01..09.jpg + deck-plan.jpg (see README.md)
+stitch_blue_horizon_charter/  original Google Stitch mockups (not published)
 ```
 
-## Lingue
+## Languages
 
-`/it`, `/en`, `/es` (`/` rimanda a `/it`). Gli indirizzi delle pagine restano
-uguali in tutte le lingue (`/en/boat`, `/es/about`): un solo albero di rotte,
-solo i testi cambiano.
+`/it`, `/en`, `/es` (`/` redirects to `/it`). Page paths stay the same across
+all languages (`/en/boat`, `/es/about`): a single route tree, only the text
+changes.
 
-Per aggiungere una lingua: una nuova voce in `dict` e in `langs` dentro
-`src/lib/i18n.js`, più il codice in `entries()` di `src/routes/[lang]/+page.js`.
-Le chiavi devono essere le stesse delle altre lingue.
+To add a language: a new entry in `dict` and in `langs` inside
+`src/lib/i18n.js`, plus the code in `entries()` of `src/routes/[lang]/+page.js`.
+Keys must match those of the other languages.
 
-## Sviluppo
+## Development
 
 ```powershell
 npm run dev          # http://localhost:5173
 npm run check        # svelte-check
 npm run build        # output in .svelte-kit/cloudflare
-npm run preview      # build servita da wrangler
+npm run preview      # build served by wrangler
 ```
 
-## Deploy su Cloudflare Pages
+## Deploy to Cloudflare Pages
 
 ```powershell
 npx wrangler pages deploy .svelte-kit/cloudflare
 ```
 
-Oppure dalla dashboard: Pages → collega il repo → build command `npm run build`,
-output directory `.svelte-kit/cloudflare`. Il nome progetto e la data di
-compatibilità stanno in `wrangler.jsonc`.
+Or from the dashboard: Pages → connect the repo → build command `npm run build`,
+output directory `.svelte-kit/cloudflare`. The project name and compatibility
+date live in `wrangler.jsonc`.
 
-## Modifiche frequenti
+## Frequent changes
 
-I testi stanno in **`src/lib/i18n.js`**, tre volte (it/en/es): scheda tecnica
-(`todo: true` = valore in corsivo "da confermare"), dotazioni, itinerari,
-descrizioni delle foto. Email, WhatsApp e nomi dei file foto stanno in
-**`src/lib/site.js`**, una volta sola.
-
-## Da completare
-
-- [ ] Foto in `static/img/` (vedi `static/img/README.md`) — finché mancano il
-      sito mostra un riquadro col nome del file atteso e la build stampa un avviso
-- [ ] Valori `todo: true` nella scheda tecnica (`src/lib/i18n.js`, in tutte e tre le lingue)
-- [ ] Email e numero WhatsApp reali (`src/lib/site.js`)
-- [ ] Itinerari reali (`src/lib/i18n.js`)
-- [ ] Storia reale (`about.p1` / `about.p2` in `src/lib/i18n.js`)
+Text lives in **`src/lib/i18n.js`**, three times (it/en/es): specs
+(`todo: true` = value shown in italics as "to be confirmed"), equipment, itineraries,
+photo descriptions. Email, WhatsApp and photo file names live in
+**`src/lib/site.js`**, only once.
