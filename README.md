@@ -53,7 +53,7 @@ The repo is connected to Cloudflare: **every push to `main` triggers a build**
 ### Before pushing
 
 ```powershell
-npm install          # only if you changed package.json
+npx -y npm@10.9.2 install   # only if you changed package.json - NOT plain `npm install`
 npm run gen          # wrangler types -> worker-configuration.d.ts (only if wrangler.jsonc changed)
 npm run check        # wrangler types --check + svelte-check
 npm run build        # same command Cloudflare runs; if it fails here it fails there
@@ -65,11 +65,21 @@ means the Cloudflare build gets the same input.
 
 ### npm version
 
-The Cloudflare build variable `NPM_VERSION = 11` must stay set: it matches the
-local npm, so `package-lock.json` is generated and consumed by the same major.
-Without it the image defaults to npm 10, which rejects a lock written by npm 11
-(`npm ci` → "Missing: ... from lock file"). Commit `package-lock.json` whenever
-it changes.
+Cloudflare builds with **npm 10.9.2** (the build image default - check the third
+line of any build log: `Detected the following tools from environment: npm@...`).
+The global npm on this machine is 11, and npm 11 rewrites `package-lock.json`
+in a form npm 10 rejects (`npm ci` → "Missing: ... from lock file"). So the lock
+must always be regenerated with npm 10:
+
+```powershell
+npx -y npm@10.9.2 install
+```
+
+Commit `package-lock.json` whenever it changes. To check it before pushing:
+
+```powershell
+npx -y npm@10.9.2 ci
+```
 
 Manual deploy, if ever needed:
 
