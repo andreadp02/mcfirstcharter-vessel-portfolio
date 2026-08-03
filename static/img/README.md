@@ -11,7 +11,8 @@ sito compare un riquadro grigio con scritto il nome atteso.
 | `home/guest-cabin.jpg` | home — anteprima galleria | cabina ospiti / bagno |
 | `home/galley.jpg` | home — anteprima galleria | cucina |
 | `about/deck.jpg` | about — hero | coperta / dettaglio esterno |
-| `about/master-cabin.jpg` | about — tondo | cabina armatoriale |
+| `about/us.jpg` | about — tondo della storia | gli armatori a bordo |
+| `about/skipper.jpg` | about — sezione skipper | ritratto verticale, taglio 4:5 |
 | `boat/sailing.jpg` | boat — foto grande in alto | VERA in navigazione, orizzontale |
 | `boat/cockpit.jpg` | boat — accanto al racconto | pozzetto / prendisole |
 | `boat/deck.jpg` | boat — accanto alla scheda tecnica | coperta / dettaglio esterno |

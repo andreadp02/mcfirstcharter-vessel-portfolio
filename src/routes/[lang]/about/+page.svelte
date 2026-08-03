@@ -55,6 +55,34 @@
 		</div>
 	</section>
 
+	<!-- Lo skipper -->
+	<section class="mx-auto mb-30 max-w-site px-5 md:px-16">
+		<div class="grid grid-cols-1 items-center gap-6 md:grid-cols-12">
+			<div class="mb-12 md:col-span-6 md:mb-0">
+				<h2 class="mb-2 font-display text-headline text-primary">{a.skipperTitle}</h2>
+				<h3 class="mb-8 text-body-lg text-secondary">{a.skipperName}</h3>
+				<div class="flex flex-col gap-6">
+					{#each a.skipperPoints as pt (pt.title)}
+						<div class="flex items-start gap-4">
+							<span class="material-symbols-outlined mt-1 text-secondary">{pt.icon}</span>
+							<div>
+								<h4 class="mb-2 text-label font-semibold text-primary">{pt.title}</h4>
+								<p class="text-body text-on-surface-variant">{pt.text}</p>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+			<div class="md:col-span-5 md:col-start-8">
+				<div
+					class="aspect-[4/5] overflow-hidden rounded-t-[100px] border border-outline-variant/30 bg-surface-variant"
+				>
+					<Img src={p.skipper.src} alt={p.skipper.alt} class="h-full w-full object-cover" />
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Come lavoriamo -->
 	<section class="mb-30 border-y border-outline-variant/20 bg-surface-bright py-30">
 		<div class="mx-auto max-w-site px-5 md:px-16">

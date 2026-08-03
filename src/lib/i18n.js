@@ -225,6 +225,26 @@ export const dict = {
 			// TODO: riscrivere con la storia reale di McFirst Charter
 			p1: 'McFirst Charter nasce dalla passione per il mare e dal desiderio di condividerla. VERA, la nostra Dufour 460 Grand Large, è pensata per far vivere il mare in totale comfort a famiglie e gruppi di amici.',
 			p2: 'Curiamo la barca nei dettagli e prepariamo ogni crociera insieme a chi salpa: rotta, tappe e ritmo si costruiscono sulle vostre esigenze, non su un pacchetto prestabilito.',
+			skipperTitle: 'Il tuo skipper',
+			// TODO: nome, anni di navigazione e certificazioni reali dello skipper
+			skipperName: 'Lo skipper di VERA',
+			skipperPoints: [
+				{
+					icon: 'directions_boat',
+					title: 'Anni di navigazione',
+					text: 'Miglia in Mediterraneo e lungo le coste delle Baleari: mare, venti e approdi conosciuti da vicino.'
+				},
+				{
+					icon: 'verified_user',
+					title: 'Patente e certificazioni',
+					text: 'Abilitazioni nautiche in regola e attenzione costante alla sicurezza di chi è a bordo.'
+				},
+				{
+					icon: 'map',
+					title: 'Conoscenza dei luoghi',
+					text: 'Cale riparate, ancoraggi tranquilli e tappe fuori dalle rotte più affollate.'
+				}
+			],
 			valuesTitle: 'Come lavoriamo',
 			values: [
 				{
@@ -258,6 +278,11 @@ export const dict = {
 			'guest-cabin': 'Cabina ospiti',
 			galley: 'Cucina',
 			helm: 'Timoneria',
+<<<<<<< HEAD
+=======
+			us: 'L’equipaggio di McFirst Charter',
+			skipper: 'Lo skipper di VERA',
+>>>>>>> about
 			'deck-plan': 'Planimetria della Dufour 460 GL VERA'
 		}
 	},
@@ -471,6 +496,26 @@ export const dict = {
 			storyTitle: 'Our story',
 			p1: 'McFirst Charter was born from a passion for the sea and the wish to share it. VERA, our Dufour 460 Grand Large, is set up to let families and groups of friends enjoy the sea in total comfort.',
 			p2: 'We look after the boat down to the details and prepare every cruise together with those sailing: route, stops and pace are built around your needs, not around a fixed package.',
+			skipperTitle: 'Your skipper',
+			// TODO: nome, anni di navigazione e certificazioni reali dello skipper
+			skipperName: 'VERA’s skipper',
+			skipperPoints: [
+				{
+					icon: 'directions_boat',
+					title: 'Years at sea',
+					text: 'Miles across the Mediterranean and along the Balearic coasts: waters, winds and landfalls known first-hand.'
+				},
+				{
+					icon: 'verified_user',
+					title: 'Licence and certifications',
+					text: 'Sailing qualifications in order and constant attention to the safety of everyone on board.'
+				},
+				{
+					icon: 'map',
+					title: 'Local knowledge',
+					text: 'Sheltered coves, quiet anchorages and stops away from the busiest routes.'
+				}
+			],
 			valuesTitle: 'How we work',
 			values: [
 				{
@@ -503,6 +548,11 @@ export const dict = {
 			'guest-cabin': 'Guest cabin',
 			galley: 'Galley',
 			helm: 'Helm station',
+<<<<<<< HEAD
+=======
+			us: 'The McFirst Charter crew',
+			skipper: 'VERA’s skipper',
+>>>>>>> about
 			'deck-plan': 'Deck plan of the Dufour 460 GL VERA'
 		}
 	},
@@ -717,6 +767,26 @@ export const dict = {
 			storyTitle: 'Nuestra historia',
 			p1: 'McFirst Charter nace de la pasión por el mar y del deseo de compartirla. VERA, nuestro Dufour 460 Grand Large, está pensado para que familias y grupos de amigos vivan el mar con total confort.',
 			p2: 'Cuidamos el barco al detalle y preparamos cada crucero junto a quien zarpa: ruta, escalas y ritmo se construyen sobre vuestras necesidades, no sobre un paquete prefijado.',
+			skipperTitle: 'Tu patrón',
+			// TODO: nome, anni di navigazione e certificazioni reali dello skipper
+			skipperName: 'El patrón de VERA',
+			skipperPoints: [
+				{
+					icon: 'directions_boat',
+					title: 'Años de navegación',
+					text: 'Millas por el Mediterráneo y las costas de Baleares: aguas, vientos y fondeaderos conocidos de primera mano.'
+				},
+				{
+					icon: 'verified_user',
+					title: 'Titulación y certificaciones',
+					text: 'Titulaciones náuticas en regla y atención constante a la seguridad de quien va a bordo.'
+				},
+				{
+					icon: 'map',
+					title: 'Conocimiento de la zona',
+					text: 'Calas resguardadas, fondeaderos tranquilos y escalas fuera de las rutas más concurridas.'
+				}
+			],
 			valuesTitle: 'Cómo trabajamos',
 			values: [
 				{
@@ -749,6 +819,11 @@ export const dict = {
 			'guest-cabin': 'Camarote de invitados',
 			galley: 'Cocina',
 			helm: 'Puesto de gobierno',
+<<<<<<< HEAD
+=======
+			us: 'La tripulación de McFirst Charter',
+			skipper: 'El patrón de VERA',
+>>>>>>> about
 			'deck-plan': 'Plano del Dufour 460 GL VERA'
 		}
 	}
