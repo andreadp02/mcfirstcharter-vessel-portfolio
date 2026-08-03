@@ -54,14 +54,12 @@ The repo is connected to Cloudflare: **every push to `main` triggers a build**
 
 ```powershell
 npx -y npm@10.9.2 install   # only if you changed package.json - NOT plain `npm install`
-npm run gen          # wrangler types -> worker-configuration.d.ts (only if wrangler.jsonc changed)
+npm run gen          # only if you changed bindings / compatibility in wrangler.jsonc
 npm run check        # wrangler types --check + svelte-check
 npm run build        # same command Cloudflare runs; if it fails here it fails there
 git add -A; git commit -m "..."; git push
 ```
 
-`npm run build` already runs `wrangler types --check`, so a green local build
-means the Cloudflare build gets the same input.
 
 ### npm version
 
