@@ -54,7 +54,7 @@ export const photos = {
 			'/img/boat/master-cabin.jpg',
 			'/img/boat/guest-cabin.jpg',
 			'/img/boat/galley.jpg',
-			'/img/boat/helm.jpg'
+			'/img/boat/bathroom.jpg'
 		]
 	}
 };
