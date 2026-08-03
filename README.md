@@ -45,15 +45,39 @@ npm run build        # output in .svelte-kit/cloudflare
 npm run preview      # build served by wrangler
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy
+
+The repo is connected to Cloudflare: **every push to `main` triggers a build**
+(`npm ci` + `npm run build`). There is nothing to deploy by hand.
+
+### Before pushing
+
+```powershell
+npm install          # only if you changed package.json
+npm run gen          # wrangler types -> worker-configuration.d.ts (only if wrangler.jsonc changed)
+npm run check        # wrangler types --check + svelte-check
+npm run build        # same command Cloudflare runs; if it fails here it fails there
+git add -A; git commit -m "..."; git push
+```
+
+`npm run build` already runs `wrangler types --check`, so a green local build
+means the Cloudflare build gets the same input.
+
+### npm version
+
+The Cloudflare build variable `NPM_VERSION = 11` must stay set: it matches the
+local npm, so `package-lock.json` is generated and consumed by the same major.
+Without it the image defaults to npm 10, which rejects a lock written by npm 11
+(`npm ci` → "Missing: ... from lock file"). Commit `package-lock.json` whenever
+it changes.
+
+Manual deploy, if ever needed:
 
 ```powershell
 npx wrangler pages deploy .svelte-kit/cloudflare
 ```
 
-Or from the dashboard: Pages → connect the repo → build command `npm run build`,
-output directory `.svelte-kit/cloudflare`. The project name and compatibility
-date live in `wrangler.jsonc`.
+The project name and compatibility date live in `wrangler.jsonc`.
 
 ## Frequent changes
 
