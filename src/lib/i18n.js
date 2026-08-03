@@ -136,9 +136,21 @@ export const dict = {
 
 		itineraries: {
 			metaDesc:
-				'Itinerari a vela a bordo di VERA, Dufour 460 GL: weekend, settimane e crociere relax tra baie e isole.',
+				'Itinerari a vela a bordo di VERA, Dufour 460 GL: settimane e crociere relax tra baie e isole.',
 			title: 'Itinerari',
 			lead: 'Crociere settimanali e vacanze relax tra baie e isole. Ogni rotta viene adattata al meteo, al vento e ai desideri dell’equipaggio.',
+			intro: [
+				'Una settimana in barca a vela tra Ibiza e Formentera è il modo più bello per vivere le Isole Baleari dal mare, tra navigazione, baie trasparenti e soste nei luoghi più iconici dell’arcipelago. A bordo con skipper, ci lasciamo portare dal ritmo giusto dell’estate: bagni a Cala Comte, Ses Salines, Cala Saona e Cala Bassa, snorkeling in acque chiarissime, aperitivi nei chiringuiti di Formentera e qualche serata da vivere fino in fondo a Ibiza.',
+				'È una vacanza pensata per chi cerca mare, leggerezza e condivisione, ma anche il piacere di vedere queste isole dal punto di vista migliore: quello della barca. Di giorno si vive all’aperto, tra sole, tuffi e relax; la sera si sceglie se restare in rada sotto le stelle o scendere a terra per respirare l’energia delle Baleari.',
+				'L’itinerario non è mai fisso: viene deciso insieme allo skipper, quando presente a bordo, e in base alle condizioni meteo del momento.'
+			],
+			imgAlt: 'Vista su Formentera dalla barca',
+			mapTitle: 'Le tappe possibili',
+			islands: {
+				title: 'Quante isole, in quanti giorni',
+				p1: 'Per una settimana consigliamo di restare tra Ibiza e Formentera: distanze brevi, ancoraggi vicini e più tempo passato in acqua che in navigazione. Spingersi verso le altre isole è comunque possibile, ma cambia il ritmo della vacanza.',
+				p2: 'Con due settimane o più si arriva con calma anche a Maiorca e Minorca, aggiungendo calette, porti e paesaggi completamente diversi.'
+			},
 			durationLabel: 'Durata',
 			paceLabel: 'Ritmo',
 			ask: 'Chiedi informazioni',
@@ -331,9 +343,21 @@ export const dict = {
 
 		itineraries: {
 			metaDesc:
-				'Sailing itineraries aboard VERA, Dufour 460 GL: weekends, weeks and relaxing cruises among bays and islands.',
+				'Sailing itineraries aboard VERA, Dufour 460 GL: weeks and relaxing cruises among bays and islands.',
 			title: 'Itineraries',
-			lead: 'Weekly cruises, weekends and relaxing holidays among bays and islands. Every route is adapted to the weather, the wind and the crew’s wishes.',
+			lead: 'Weekly cruises and relaxing holidays among bays and islands. Every route is adapted to the weather, the wind and the crew’s wishes.',
+			intro: [
+				'A week sailing between Ibiza and Formentera is the finest way to experience the Balearic Islands from the sea: sailing, crystal-clear bays and stops at the most iconic spots of the archipelago. On board with a skipper, we let summer set the pace: swims at Cala Comte, Ses Salines, Cala Saona and Cala Bassa, snorkelling in the clearest water, sunset drinks at the chiringuitos of Formentera and the odd night out in Ibiza.',
+				'It is a holiday for those looking for sea, lightness and good company, and also for the pleasure of seeing these islands from the best possible viewpoint: the boat. Days are spent outdoors, between sun, dives and downtime; in the evening you choose whether to stay at anchor under the stars or go ashore and soak up the energy of the Balearics.',
+				'The itinerary is never fixed: it is decided together with the skipper, when on board, and according to the weather conditions of the moment.'
+			],
+			imgAlt: 'View of Formentera from the boat',
+			mapTitle: 'Possible stops along the way',
+			islands: {
+				title: 'How many islands, in how many days',
+				p1: 'For a one-week charter we suggest staying between Ibiza and Formentera: short hops, anchorages close to each other and more time in the water than under way. Heading to the other islands is possible too, but it changes the pace of the holiday.',
+				p2: 'With two weeks or more you can comfortably reach Mallorca and Menorca as well, adding coves, harbours and completely different landscapes.'
+			},
 			durationLabel: 'Duration',
 			paceLabel: 'Pace',
 			ask: 'Ask for details',
@@ -525,9 +549,21 @@ export const dict = {
 
 		itineraries: {
 			metaDesc:
-				'Itinerarios a vela a bordo de VERA, Dufour 460 GL: fines de semana, semanas y cruceros relax entre calas e islas.',
+				'Itinerarios a vela a bordo de VERA, Dufour 460 GL: semanas y cruceros relax entre calas e islas.',
 			title: 'Itinerarios',
-			lead: 'Cruceros semanales, fines de semana y vacaciones relax entre calas e islas. Cada ruta se adapta al tiempo, al viento y a los deseos de la tripulación.',
+			lead: 'Cruceros semanales y vacaciones relax entre calas e islas. Cada ruta se adapta al tiempo, al viento y a los deseos de la tripulación.',
+			intro: [
+				'Una semana en velero entre Ibiza y Formentera es la forma más bonita de vivir las Islas Baleares desde el mar, entre navegación, calas transparentes y paradas en los lugares más icónicos del archipiélago. A bordo con patrón, nos dejamos llevar por el ritmo del verano: baños en Cala Comte, Ses Salines, Cala Saona y Cala Bassa, snorkel en aguas clarísimas, aperitivos en los chiringuitos de Formentera y alguna noche para vivir a fondo en Ibiza.',
+				'Son unas vacaciones pensadas para quien busca mar, ligereza y buena compañía, pero también el placer de ver estas islas desde el mejor punto de vista: el del barco. De día se vive al aire libre, entre sol, chapuzones y relax; por la noche se elige entre quedarse fondeados bajo las estrellas o bajar a tierra para respirar la energía de las Baleares.',
+				'El itinerario nunca es fijo: se decide junto al patrón, cuando está a bordo, y según las condiciones meteorológicas del momento.'
+			],
+			imgAlt: 'Vista de Formentera desde el barco',
+			mapTitle: 'Las paradas posibles',
+			islands: {
+				title: 'Cuántas islas, en cuántos días',
+				p1: 'Para una semana recomendamos quedarse entre Ibiza y Formentera: distancias cortas, fondeos cercanos y más tiempo en el agua que navegando. Llegar a las demás islas también es posible, pero cambia el ritmo de las vacaciones.',
+				p2: 'Con dos semanas o más se alcanzan con calma también Mallorca y Menorca, añadiendo calas, puertos y paisajes completamente distintos.'
+			},
 			durationLabel: 'Duración',
 			paceLabel: 'Ritmo',
 			ask: 'Pide información',

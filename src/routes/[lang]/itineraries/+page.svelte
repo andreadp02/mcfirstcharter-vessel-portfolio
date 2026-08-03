@@ -17,36 +17,38 @@
 		<p class="text-body-lg text-on-surface-variant">{it.lead}</p>
 	</section>
 
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-		{#each it.items as item (item.title)}
-			<article
-				class="flex flex-col rounded border border-outline-variant/30 bg-surface-container-lowest p-8"
-			>
-				<span class="material-symbols-outlined mb-6 text-tertiary-fixed-dim">radio_button_checked</span>
-				<h2 class="mb-4 font-display text-headline-sm text-primary">{item.title}</h2>
-				<div class="mb-6 flex gap-6">
-					<div>
-						<span class="mb-1 block text-caps text-primary-container/60 uppercase"
-							>{it.durationLabel}</span
-						>
-						<span class="text-body">{item.duration}</span>
-					</div>
-					<div class="w-px bg-outline-variant/30"></div>
-					<div>
-						<span class="mb-1 block text-caps text-primary-container/60 uppercase"
-							>{it.paceLabel}</span
-						>
-						<span class="text-body">{item.pace}</span>
-					</div>
-				</div>
-				<p class="grow text-body text-on-surface-variant">{item.text}</p>
-				<a
-					class="mt-8 w-max border-b border-transparent pb-1 text-label text-secondary transition-colors hover:border-secondary"
-					href="/{data.lang}/#contact">{it.ask}</a
-				>
-			</article>
-		{/each}
-	</div>
+	<section class="mb-20 grid grid-cols-1 items-start gap-12 md:grid-cols-2">
+		<div>
+			{#each it.intro as p (p)}
+				<p class="mb-6 text-body text-on-surface-variant">{p}</p>
+			{/each}
+		</div>
+		<!-- ponytail: placeholder, sostituire con <img src="/img/itineraries/view-formentera.jpg" alt={it.imgAlt} /> quando la foto c'è -->
+		<div
+			class="flex aspect-4/3 flex-col items-center justify-center gap-3 rounded border border-dashed border-outline-variant/50 bg-surface-container-lowest text-on-surface-variant/60"
+		>
+			<span class="material-symbols-outlined text-4xl">image</span>
+			<span class="text-caps uppercase">{it.imgAlt}</span>
+		</div>
+	</section>
+
+	<section class="mb-20 grid grid-cols-1 items-start gap-12 md:grid-cols-2">
+		<figure>
+			<iframe
+				class="aspect-4/3 w-full rounded border border-outline-variant/30"
+				src="https://www.google.com/maps/d/embed?mid=1Mx5p22xHCd6mHyofnwz9KESTz0q2saE&ll=38.83382829369669%2C1.3732196999999946&z=11"
+				title={it.mapTitle}
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+			<figcaption class="mt-4 text-caps text-primary-container/60 uppercase">{it.mapTitle}</figcaption>
+		</figure>
+		<div>
+			<h2 class="mb-6 font-display text-headline-sm text-primary">{it.islands.title}</h2>
+			<p class="mb-6 text-body text-on-surface-variant">{it.islands.p1}</p>
+			<p class="text-body text-on-surface-variant">{it.islands.p2}</p>
+		</div>
+	</section>
 
 	<div
 		class="mt-20 flex flex-col items-start justify-between gap-6 border-t border-outline-variant/30 pt-12 md:flex-row md:items-center"
