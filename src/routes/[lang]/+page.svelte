@@ -145,30 +145,4 @@
 			{/each}
 		</div>
 	</section>
-
-	<!-- Contatti -->
-	<section id="contact" class="mx-auto max-w-site px-5 pb-30 md:px-16">
-		<div
-			class="flex flex-col items-center justify-center rounded bg-primary-container px-8 py-24 text-center"
-		>
-			<h2 class="mb-6 font-display text-headline text-on-primary">{h.contactTitle}</h2>
-			<p class="mx-auto mb-10 max-w-2xl text-body-lg text-primary-fixed-dim">{h.contactText}</p>
-			<div class="flex flex-col gap-4 sm:flex-row">
-				<a
-					class="inline-flex items-center gap-2 rounded bg-on-primary px-8 py-4 text-label text-primary-container transition-colors hover:bg-secondary-fixed"
-					href="mailto:{site.email}?subject={encodeURIComponent(t.mailSubject)}"
-				>
-					<span class="material-symbols-outlined text-xl">mail</span>
-					{site.email}
-				</a>
-				<a
-					class="inline-flex items-center gap-2 rounded border border-on-primary/40 px-8 py-4 text-label text-on-primary transition-colors hover:bg-on-primary/10"
-					href="https://wa.me/{site.whatsapp}"
-				>
-					<span class="material-symbols-outlined text-xl">chat</span>
-					WhatsApp
-				</a>
-			</div>
-		</div>
-	</section>
 </main>

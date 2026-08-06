@@ -15,13 +15,15 @@ export const dict = {
 	it: {
 		tagline: 'Dufour 460 GL "VERA" — crociere a vela tra baie e isole.',
 		cta: 'Richiedi disponibilità',
+		// versione corta: il pulsante della navbar deve stare in riga anche su mobile
+		book: 'Prenota',
 		contacts: 'Contatti',
 		menu: 'Menu',
 		language: 'Lingua',
 		nav: [
 			{ href: '/boat', label: 'La Barca' },
+			{ href: '/charter', label: 'Il Noleggio' },
 			{ href: '/itineraries', label: 'Itinerari' },
-			{ href: '/harbour', label: 'Il Porto' },
 			{ href: '/about', label: 'Chi Siamo' }
 		],
 		mailSubject: 'Richiesta disponibilità VERA',
@@ -64,10 +66,7 @@ export const dict = {
 					title: 'Da Maggio a Ottobre',
 					text: 'Crociere settimanali e vacanze relax tra baie e isole.'
 				}
-			],
-			contactTitle: 'Pronti a salpare?',
-			contactText:
-				'Scrivici per verificare le disponibilità e ricevere un preventivo per il tuo periodo.'
+			]
 		},
 
 		boat: {
@@ -132,7 +131,7 @@ export const dict = {
 			galleryOverline: 'Galleria',
 			galleryTitle: 'Interni ed esterni',
 			ctaTitle: 'Vuoi salire a bordo?',
-			ctaText: 'Contattaci per disponibilità e preventivo.'
+			ctaText: 'Contattaci per verificare la disponibilità e prenotare la tua vacanza.'
 		},
 
 		itineraries: {
@@ -179,11 +178,16 @@ export const dict = {
 			note: 'Le rotte vengono definite insieme prima della partenza, tenendo conto delle condizioni meteo.'
 		},
 
-		harbour: {
+		charter: {
 			metaDesc:
-				'Dove si imbarca su VERA: Marina Alicante, come arrivare e le regole del noleggio — settimana da sabato a sabato, cauzione ed extra.',
-			title: 'Il Porto',
-			lead: 'VERA parte da Alicante. Da qui si raggiungono Ibiza e Formentera: qui trovi dove ci si imbarca, come arrivare e le condizioni del noleggio.',
+				'Noleggio di VERA, Dufour 460 GL: da 3.690 € a settimana in bassa stagione, 4.590 € in alta. Partenza da Marina Alicante, sabato-sabato, cauzione ed extra.',
+			title: 'Il Noleggio',
+			lead: 'Una settimana a bordo di VERA, da sabato a sabato. Qui trovi la tariffa per periodo, le condizioni del noleggio e come si arriva al porto di partenza.',
+			ratesTitle: 'Tariffe',
+			perWeek: 'a settimana',
+			seasons: { low: 'Bassa stagione', high: 'Alta stagione' },
+			ratesNote:
+				'La tariffa comprende la barca e la sua dotazione di bordo per una settimana da sabato a sabato. Cauzione ed extra sono a parte, qui sotto. Per date fuori da questi periodi scrivici: ci organizziamo.',
 			addressLabel: 'Indirizzo',
 			mapTitle: 'Dove trovi la barca',
 			openInMaps: 'Apri in Google Maps',
@@ -214,7 +218,9 @@ export const dict = {
 				{ key: 'earlyCheckin', label: 'Check-in anticipato' },
 				{ key: 'tenderEngine', label: 'Motore del tender' }
 			],
-			note: 'Carburante, ormeggi fuori base e spesa di bordo restano a carico dell’equipaggio. Per qualsiasi dubbio sulle condizioni, scrivici prima di prenotare.'
+			note: 'Carburante, ormeggi fuori base e spesa di bordo restano a carico dell’equipaggio. Per qualsiasi dubbio sulle condizioni, scrivici prima di prenotare.',
+			contactTitle: 'Pronti a salpare?',
+			contactText: 'Contattaci per verificare la disponibilità e prenotare la tua vacanza.'
 		},
 
 		about: {
@@ -287,13 +293,14 @@ export const dict = {
 	en: {
 		tagline: 'Dufour 460 GL "VERA" — sailing holidays among bays and islands.',
 		cta: 'Check availability',
+		book: 'Book',
 		contacts: 'Contact',
 		menu: 'Menu',
 		language: 'Language',
 		nav: [
 			{ href: '/boat', label: 'The Boat' },
+			{ href: '/charter', label: 'The Charter' },
 			{ href: '/itineraries', label: 'Itineraries' },
-			{ href: '/harbour', label: 'The Harbour' },
 			{ href: '/about', label: 'About Us' }
 		],
 		mailSubject: 'VERA availability request',
@@ -336,9 +343,7 @@ export const dict = {
 					title: 'From May to October',
 					text: 'Weekly cruises and relaxing holidays among bays and islands.'
 				}
-			],
-			contactTitle: 'Ready to set sail?',
-			contactText: 'Write to us to check availability and get a quote for your dates.'
+			]
 		},
 
 		boat: {
@@ -402,7 +407,7 @@ export const dict = {
 			galleryOverline: 'Gallery',
 			galleryTitle: 'Inside and out',
 			ctaTitle: 'Want to come aboard?',
-			ctaText: 'Get in touch for availability and a quote.'
+			ctaText: 'Get in touch to check availability and book your holiday.'
 		},
 
 		itineraries: {
@@ -448,11 +453,16 @@ export const dict = {
 			note: 'Routes are agreed together before departure, taking the weather into account.'
 		},
 
-		harbour: {
+		charter: {
 			metaDesc:
-				'Where you board VERA: Marina Alicante, how to get there and the charter terms — Saturday-to-Saturday weeks, deposit and extras.',
-			title: 'The Harbour',
-			lead: 'VERA sails from Alicante, the gateway to Ibiza and Formentera. Here is where you board, how to get there and how the charter works.',
+				'Charter VERA, a Dufour 460 GL: from €3,690 per week in low season, €4,590 in high. Sailing from Marina Alicante, Saturday to Saturday, deposit and extras.',
+			title: 'The Charter',
+			lead: 'A week aboard VERA, Saturday to Saturday. Here are the rates by period, the charter terms and how to reach the home port.',
+			ratesTitle: 'Rates',
+			perWeek: 'per week',
+			seasons: { low: 'Low season', high: 'High season' },
+			ratesNote:
+				'The rate covers the boat and her standard equipment for one week, Saturday to Saturday. Deposit and extras are separate, listed below. For dates outside these periods write to us — we will work something out.',
 			addressLabel: 'Address',
 			mapTitle: 'Where to find the boat',
 			openInMaps: 'Open in Google Maps',
@@ -483,7 +493,9 @@ export const dict = {
 				{ key: 'earlyCheckin', label: 'Early check-in' },
 				{ key: 'tenderEngine', label: 'Tender outboard engine' }
 			],
-			note: 'Fuel, mooring fees away from the home port and provisioning are down to the crew. If anything about the terms is unclear, write to us before booking.'
+			note: 'Fuel, mooring fees away from the home port and provisioning are down to the crew. If anything about the terms is unclear, write to us before booking.',
+			contactTitle: 'Ready to set sail?',
+			contactText: 'Get in touch to check availability and book your holiday.'
 		},
 
 		about: {
@@ -554,13 +566,14 @@ export const dict = {
 	es: {
 		tagline: 'Dufour 460 GL "VERA" — cruceros a vela entre calas e islas.',
 		cta: 'Consultar disponibilidad',
+		book: 'Reservar',
 		contacts: 'Contacto',
 		menu: 'Menú',
 		language: 'Idioma',
 		nav: [
 			{ href: '/boat', label: 'El Barco' },
+			{ href: '/charter', label: 'El Alquiler' },
 			{ href: '/itineraries', label: 'Itinerarios' },
-			{ href: '/harbour', label: 'El Puerto' },
 			{ href: '/about', label: 'Quiénes Somos' }
 		],
 		mailSubject: 'Consulta de disponibilidad VERA',
@@ -603,10 +616,7 @@ export const dict = {
 					title: 'De mayo a octubre',
 					text: 'Cruceros semanales y vacaciones relax entre calas e islas.'
 				}
-			],
-			contactTitle: '¿Listos para zarpar?',
-			contactText:
-				'Escríbenos para consultar la disponibilidad y recibir un presupuesto para tus fechas.'
+			]
 		},
 
 		boat: {
@@ -670,7 +680,7 @@ export const dict = {
 			galleryOverline: 'Galería',
 			galleryTitle: 'Interiores y exteriores',
 			ctaTitle: '¿Quieres subir a bordo?',
-			ctaText: 'Contáctanos para disponibilidad y presupuesto.'
+			ctaText: 'Contáctanos para consultar la disponibilidad y reservar tus vacaciones.'
 		},
 
 		itineraries: {
@@ -716,11 +726,16 @@ export const dict = {
 			note: 'Las rutas se definen juntos antes de zarpar, teniendo en cuenta las condiciones meteorológicas.'
 		},
 
-		harbour: {
+		charter: {
 			metaDesc:
-				'Dónde se embarca en VERA: Marina Alicante, cómo llegar y las condiciones del alquiler — semana de sábado a sábado, fianza y extras.',
-			title: 'El Puerto',
-			lead: 'VERA sale de Alicante, la puerta de entrada a Ibiza y Formentera. Aquí encontrarás dónde se embarca, cómo llegar y cómo funciona el alquiler.',
+				'Alquiler de VERA, Dufour 460 GL: desde 3.690 € por semana en temporada baja, 4.590 € en alta. Salida desde Marina Alicante, de sábado a sábado, fianza y extras.',
+			title: 'El Alquiler',
+			lead: 'Una semana a bordo de VERA, de sábado a sábado. Aquí tienes la tarifa por periodo, las condiciones del alquiler y cómo llegar al puerto base.',
+			ratesTitle: 'Tarifas',
+			perWeek: 'por semana',
+			seasons: { low: 'Temporada baja', high: 'Temporada alta' },
+			ratesNote:
+				'La tarifa incluye el barco y su equipamiento de a bordo durante una semana de sábado a sábado. La fianza y los extras van aparte, aquí abajo. Para fechas fuera de estos periodos escríbenos: lo organizamos.',
 			addressLabel: 'Dirección',
 			mapTitle: 'Dónde está el barco',
 			openInMaps: 'Abrir en Google Maps',
@@ -751,7 +766,9 @@ export const dict = {
 				{ key: 'earlyCheckin', label: 'Check-in anticipado' },
 				{ key: 'tenderEngine', label: 'Motor del auxiliar' }
 			],
-			note: 'El combustible, los amarres fuera de la base y la compra de a bordo corren a cargo de la tripulación. Si tienes dudas sobre las condiciones, escríbenos antes de reservar.'
+			note: 'El combustible, los amarres fuera de la base y la compra de a bordo corren a cargo de la tripulación. Si tienes dudas sobre las condiciones, escríbenos antes de reservar.',
+			contactTitle: '¿Listos para zarpar?',
+			contactText: 'Contáctanos para consultar la disponibilidad y reservar tus vacaciones.'
 		},
 
 		about: {

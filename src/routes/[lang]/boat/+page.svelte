@@ -183,7 +183,7 @@
 			<div class="settle">
 				<a
 					class="inline-flex items-center gap-2 rounded bg-on-primary px-8 py-4 text-label text-primary-container shadow-lg transition-colors hover:bg-secondary-fixed"
-					href="/{data.lang}/#contact"
+					href="/{data.lang}/charter#contact"
 				>
 					{t.cta}
 					<span class="material-symbols-outlined text-xl">arrow_forward</span>

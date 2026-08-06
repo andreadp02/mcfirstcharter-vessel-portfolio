@@ -341,18 +341,9 @@ html {
 	}
 }
 
-/* segnaposto mostrato da <Img> finché la foto non è in static/img/ */
-.img-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 8px;
-	min-height: 120px;
-	background: repeating-linear-gradient(45deg, #e8e8e8, #e8e8e8 10px, #e2e2e2 10px, #e2e2e2 20px);
-	color: var(--color-on-surface-variant);
-	font-size: var(--text-caps);
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+/* foto non ancora in static/img/: <Img> lascia solo .img-missing e il riquadro che
+   la conteneva sparisce, così non resta un buco in pagina. Torna da sé col file. */
+.img-missing,
+:has(> .img-missing) {
+	display: none;
 }

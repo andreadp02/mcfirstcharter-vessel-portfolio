@@ -9,7 +9,7 @@ src/
   hooks.server.js           fills %lang% with the page's language
   lib/i18n.js               ALL text, one entry per language (it/en/es)
   lib/site.js               non-translatable data: contacts, boat name, photo list
-  lib/Img.svelte            <img> with a placeholder if the file is missing
+  lib/Img.svelte            <img> that hides itself and its frame if the file is missing
   routes/
     +layout.js/.svelte      prerender = true, CSS and favicon
     +page.js                "/" -> "/it"

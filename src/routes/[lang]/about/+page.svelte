@@ -108,7 +108,7 @@
 			<p class="mx-auto mb-10 max-w-2xl text-body-lg text-primary-fixed-dim">{a.ctaText}</p>
 			<a
 				class="inline-flex items-center gap-2 rounded bg-on-primary px-8 py-4 text-label text-primary-container transition-colors hover:bg-secondary-fixed"
-				href="/{data.lang}/#contact"
+				href="/{data.lang}/charter#contact"
 			>
 				{t.cta}
 				<span class="material-symbols-outlined text-xl">arrow_forward</span>

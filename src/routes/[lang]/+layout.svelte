@@ -13,12 +13,16 @@
 </script>
 
 <nav class="fixed top-0 z-50 w-full border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
-	<div class="mx-auto flex max-w-site items-center justify-between gap-4 px-5 py-4 md:px-16">
+	<div class="mx-auto flex max-w-site items-center justify-between gap-2 px-4 py-4 md:gap-4 md:px-16">
+		<!-- logotipo: ricalca il monogramma del favicon, M blu + F oro, serif in
+		     maiuscoletto largo. Il nome è scritto qui perché va spezzato in due
+		     colori; site.name resta la fonte per tutto il resto.
+		     Su mobile rimpicciolisce per lasciare in riga il pulsante Prenota. -->
 		<a
-			class="font-display text-headline-sm tracking-tighter text-primary uppercase"
+			class="font-display text-[15px] tracking-[0.06em] whitespace-nowrap text-primary-container uppercase min-[380px]:text-[17px] sm:text-[18px] sm:tracking-[0.1em] md:text-headline-sm md:tracking-[0.14em]"
 			href="/{data.lang}"
 		>
-			{site.name}
+			Mc<span class="text-[#b8924f]">First</span> Charter
 		</a>
 
 		<div class="hidden items-center space-x-12 md:flex">
@@ -32,8 +36,8 @@
 			{/each}
 		</div>
 
-		<div class="hidden items-center gap-6 md:flex">
-			<div class="flex items-center gap-2 text-caps uppercase" aria-label={t.language}>
+		<div class="flex items-center gap-2 md:gap-6">
+			<div class="hidden items-center gap-2 text-caps uppercase md:flex" aria-label={t.language}>
 				{#each langs as l (l.code)}
 					<a
 						class={l.code === data.lang
@@ -45,20 +49,23 @@
 					>
 				{/each}
 			</div>
+			<!-- sempre visibile, anche su mobile: prenotare non deve passare dal menù -->
 			<a
-				class="rounded bg-primary-container px-6 py-2.5 text-label text-on-primary shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
-				href="/{data.lang}/#contact">{t.cta}</a
+				class="shrink-0 rounded bg-primary-container px-3 py-2 text-label whitespace-nowrap text-on-primary shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md md:px-6 md:py-2.5"
+				href="/{data.lang}/charter#contact">{t.book}</a
 			>
-		</div>
 
-		<button
-			class="flex items-center text-primary md:hidden"
-			aria-label={t.menu}
-			aria-expanded={menuOpen}
-			onclick={() => (menuOpen = !menuOpen)}
-		>
-			<span class="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
-		</button>
+			<!-- nello stesso gruppo del Prenota: su mobile il pulsante resta appoggiato
+			     alle tre linee, in fondo a destra -->
+			<button
+				class="flex shrink-0 items-center text-primary md:hidden"
+				aria-label={t.menu}
+				aria-expanded={menuOpen}
+				onclick={() => (menuOpen = !menuOpen)}
+			>
+				<span class="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
+			</button>
+		</div>
 	</div>
 
 	{#if menuOpen}
@@ -75,10 +82,6 @@
 					href="/{data.lang}{item.href}">{item.label}</a
 				>
 			{/each}
-			<a
-				class="rounded bg-primary-container px-4 py-2.5 text-center text-label text-on-primary"
-				href="/{data.lang}/#contact">{t.cta}</a
-			>
 			<div class="flex gap-4 border-t border-outline-variant/30 pt-4 text-caps uppercase">
 				{#each langs as l (l.code)}
 					<a
@@ -97,8 +100,8 @@
 <footer class="w-full border-t border-tertiary bg-primary-container">
 	<div class="mx-auto grid max-w-site grid-cols-1 gap-6 px-5 py-20 md:grid-cols-4 md:px-16">
 		<div class="mb-10 md:mb-0">
-			<span class="mb-4 block font-display text-headline text-on-primary-container uppercase">
-				{site.name}
+			<span class="mb-4 block font-display text-headline tracking-[0.14em] text-white uppercase">
+				Mc<span class="text-[#b8924f]">First</span> Charter
 			</span>
 			<p class="text-sm text-on-primary-container/70">{t.tagline}</p>
 		</div>
@@ -113,7 +116,7 @@
 			{/each}
 			<a
 				class="text-on-primary-container/70 transition-colors hover:text-tertiary-fixed"
-				href="/{data.lang}/#contact"
+				href="/{data.lang}/charter#contact"
 			>
 				{t.contacts}
 			</a>

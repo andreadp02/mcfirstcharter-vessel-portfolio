@@ -24,9 +24,9 @@ prioritario.
 
 McFirst Charter noleggia **una sola barca**, la Dufour 460 Grand Large "VERA":
 14 metri, 4 cabine, 4 bagni. Il sito esiste per far arrivare una richiesta di
-disponibilità via email o WhatsApp — non c'è prenotazione online, non c'è
-listino pubblico. Il successo è una conversazione avviata con date e numero di
-persone.
+disponibilità via email o WhatsApp — **non c'è prenotazione online**: la tariffa
+settimanale è pubblica, si contatta per verificare le date e prenotare. Il
+successo è una conversazione avviata con date e numero di persone.
 
 ## Positioning
 
@@ -61,13 +61,24 @@ charter con solo skipper non può offrire la stessa flessibilità di formula.
   (`src/routes/+page.js`) — è un lavoro ancora da fare, ed è un
   reindirizzamento lato Cloudflare o client, non lato server persistente,
   perché il sito è prerenderizzato.
-- Quattro pagine per lingua: home (con sezione contatti), barca, itinerari, chi
-  siamo.
+- Cinque pagine per lingua: home, barca, noleggio, itinerari, chi siamo. La
+  pagina noleggio (`/[lang]/charter`) raccoglie tariffe, condizioni ed extra,
+  poi il porto base con mappa e come arrivare, e **chiude con i contatti**
+  (`#contact`, email e WhatsApp). È l'unica sezione contatti del sito: ogni CTA
+  "richiedi disponibilità", in navbar, footer e in fondo alle altre pagine,
+  punta a `/[lang]/charter#contact`.
+- **Tutti gli importi stanno in `src/lib/site.js`**, mai nei testi: `fees` per
+  cauzione ed extra, `seasons` per la tariffa settimanale e le finestre di
+  stagione (date `MM-GG`, ricorrenti). Sono dati indipendenti dalla lingua,
+  richiamati per chiave da `i18n.js` (`charter.rules`, `charter.extras`,
+  `charter.seasons`) e formattati a runtime con `toLocaleString` /
+  `toLocaleDateString`. **I prezzi cambiano di stagione in stagione**:
+  aggiornarli è modificare un numero in un file, mai i tre dizionari.
 - **Non deciso / non confermato**, da non inventare: posti letto, anno di
   costruzione, baglio, pescaggio, motore, marina esatta (marcati `todo: true` in
-  `i18n.js`); prezzi e listino; itinerari reali (i tre attuali —
-  weekend / settimana / su misura — sono segnaposto); email e numero WhatsApp
-  reali (`src/lib/site.js` contiene ancora valori fittizi).
+  `i18n.js`); itinerari reali (i tre attuali — weekend / settimana / su misura —
+  sono segnaposto); email e numero WhatsApp reali (`src/lib/site.js` contiene
+  ancora valori fittizi).
 
 ## Brand Commitments
 

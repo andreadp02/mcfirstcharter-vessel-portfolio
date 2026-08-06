@@ -19,16 +19,31 @@ export const harbour = {
 	mapsQuery: 'Marina Alicante, Muelle de Levante, Alicante'
 };
 
-// Importi in euro. Le etichette stanno in i18n.js (`harbour.rules` / `harbour.extras`),
+// Importi in euro. Le etichette stanno in i18n.js (`charter.rules` / `charter.extras`),
 // riferite per chiave: il prezzo non va duplicato nelle tre lingue.
 /** @type {Record<string, number>} */
-export const charter = {
+export const fees = {
 	deposit: 2000,
 	cleaning: 150,
 	skipper: 250,
 	earlyCheckin: 250,
 	tenderEngine: 100
 };
+
+// Tariffa settimanale in euro, sabato-sabato. Le date sono MM-GG e valgono ogni anno.
+// I nomi delle stagioni stanno in i18n.js (`charter.seasons`), riferiti per chiave.
+// Fuori da questi periodi non c'è tariffa pubblicata: si risponde a richiesta.
+export const seasons = [
+	{
+		key: 'low',
+		week: 3690,
+		ranges: [
+			['06-01', '07-15'],
+			['08-29', '10-03']
+		]
+	},
+	{ key: 'high', week: 4590, ranges: [['07-16', '08-28']] }
+];
 
 // Una cartella per pagina: static/img/<pagina>/<soggetto>.jpg — vedi static/img/README.md.
 // L'alt viene dal nome del file (il soggetto): i18n.js, `photoAlts`. Lo stesso soggetto

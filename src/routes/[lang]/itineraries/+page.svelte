@@ -50,7 +50,7 @@
 		<p class="max-w-xl text-body-lg text-on-surface-variant">{it.note}</p>
 		<a
 			class="inline-flex items-center gap-2 rounded bg-primary-container px-8 py-4 text-label text-on-primary transition-opacity hover:opacity-90"
-			href="/{data.lang}/#contact"
+			href="/{data.lang}/charter#contact"
 		>
 			{t.cta}
 			<span class="material-symbols-outlined text-xl">arrow_forward</span>
